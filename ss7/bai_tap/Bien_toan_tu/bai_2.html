@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi don vi nhiet do</title>
+</head>
+<body>
+<input type="number" id="doC" value="">
+<button onclick="chuyenDoi()">Change</button>
+<p id = "doF"></p>
+</body>
+</html>
+<script>
+  function chuyenDoi() {
+    let a = +parseFloat(document.getElementById("doC").value);
+    let b = (9 * a) / 5 + 32;
+    let c = document.getElementById("doF").innerHTML = "Result: " + b;
+  }
+</script>
