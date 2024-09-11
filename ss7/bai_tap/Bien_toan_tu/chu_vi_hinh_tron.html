@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu vi hình tròn</title>
+</head>
+<body>
+<h3>Pleaes enter the value to caculate:</h3>
+<input type="number" id="r">
+<button onclick="tinhChuvi()">Caculate</button>
+<p id="chuvi"> </p>
+</body>
+</html>
+<script>
+function tinhChuvi(){
+    let a = document.getElementById("r").value;
+    let b = 2 * a * Math.PI;
+    let c = b.toFixed(2);
+    document.getElementById("chuvi").innerHTML="Result: " + c;
+}
+</script>
