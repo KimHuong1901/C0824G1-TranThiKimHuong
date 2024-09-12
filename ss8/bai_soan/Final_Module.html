@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Module</title>
+</head>
+<body>
+<input type="number" id="grade" value= "" onchange="statucsStudent()">
+<p id = "result"></p>
+</body>
+</html>
+<script>
+    function statucsStudent(){
+       let grade = parseFloat(document.getElementById("grade").value);
+        if (grade >= 75){
+           document.getElementById("result").innerHTML="Result is pass module"
+        }
+    }
+</script>

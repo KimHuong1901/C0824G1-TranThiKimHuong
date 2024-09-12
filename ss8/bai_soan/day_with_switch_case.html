@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check data match with day</title>
+</head>
+<body>
+<input type="number" id="time" onchange="day()">
+<p id ="weekday"></p>
+</body>
+</html>
+<script>
+  function day(){
+  let a = parseFloat(document.getElementById("time").value);
+  let weekDay;
+switch (a){
+  case 1:
+    weekDay = "chủ nhật";
+    break;
+  case 2:
+    weekDay = "thứ hai";
+    break;
+  case 3:
+    weekDay = "thứ ba";
+    break;
+  case 4:
+    weekDay = "thứ tư";
+    break;
+  case 5:
+    weekDay = "thứ năm";
+    break;
+  case 6:
+    weekDay = "thứ sáu";
+    break;
+  case 7:
+    weekDay = "thứ bảy";
+    break;
+  default:
+    weekDay = "Không phải các ngày trong tuần"
+}
+    document.getElementById("weekday").innerHTML = weekDay;
+  }
+
+</script>
