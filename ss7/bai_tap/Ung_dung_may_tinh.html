@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h2>Caculate</h2>
+<form>
+  <input type="number" id="first">
+  <input type="number" id="second"></br>
+  </br>
+  <button onclick="caculate()" id="result1">Addition(+)</button>
+  <button onclick="caculate()" id="result2">Subtraction(-)</button>
+  <button onclick="caculate()" id="result3">Multiplication(*)</button>
+  <button onclick="caculate()" id="result4">Division(/)</button>
+</form>
+<p id="f"></p>
+</body>
+</html>
+<script>
+function caculate(z){
+  let x = document.getElementById("first").value
+  let y = document.getElementById("second").value
+  let result = 0;
+  if (z == "result1"){
+    result = x + y;
+  }
+  else if (z == "result2"){
+      result = x - y;
+  }
+  else if (z == "result3"){
+      result = x * y;
+  }
+  else {
+      result = x / y;
+  }
+  document.getElementById("f").innerHTML = 'Result is; ' + result;
+}
+</script>
