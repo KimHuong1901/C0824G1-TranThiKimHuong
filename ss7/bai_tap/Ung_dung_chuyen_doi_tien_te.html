@@ -19,15 +19,15 @@
     <th></th>
   </tr>
   <tr>
-    <td> <input type="text" id="Amount" style="border: 1px solid black; height: 20px; width: 150px"></td>
+    <td> <input type="text" id="amount" style="border: 1px solid black; height: 20px; width: 150px"></td>
     <td>
-      <select id="From" style="border: 1px solid black; height: 20px; width: 100px">
+      <select id="from" style="border: 1px solid black; height: 20px; width: 100px">
         <option value="VND">VND</option>
         <option value="USD">USD</option>
       </select>
     </td>
       <td>
-      <select id="To" style="border: 1px solid black; height: 20px; width: 100px">
+      <select id="to" style="border: 1px solid black; height: 20px; width: 100px">
         <option value="USD">USD</option>
         <option value="VND">VND</option>
       </select>
@@ -37,27 +37,27 @@
     </td>
   </tr>
 </table>
-<p id = "Result"></p>
+<p id = "result"></p>
 </body>
 </html>
 <script>
   function convertMoney(){
-    let x = document.getElementById("Amount").value;
-    let y = document.getElementById("From").value;
-    let z = document.getElementById("To").value;
-    let c = document.getElementById("Result").value;
-    if (y == "VND" && z == "USD"){
-        c = x / 25000;
+    let amount = document.getElementById("amount").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let result = document.getElementById("result").value;
+    if (from == "VND" && to == "USD"){
+      result = amount / 25000;
     }
-    else if (y == "USD" && z == "VND"){
-      c = x * 25000;
+    else if (from == "USD" && to == "VND"){
+      result = amount * 25000;
     }
-    else if (y == "VND" && z == "VND"){
-      c = x;
+    else if (from == "VND" && to == "VND"){
+      result = amount;
     }
     else {
-      c = x;
+      result = amount;
     }
-    document.getElementById("Result").innerHTML = "Result is: " + c;
+    document.getElementById("result").innerHTML = "Result is: " + result;
   }
 </script>
