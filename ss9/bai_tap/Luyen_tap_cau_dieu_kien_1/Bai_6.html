@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Price product</p>
+<input type="text" id = "price"><br>
+<p>Quantity</p>
+<input type="text" id="quantity"><br>
+<button type="button" onclick="check()">Check</button>
+<p id = "sumincome"></p>
+</body>
+</html>
+<script>
+  //Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+  //Mỗi sản phẩm bán ra sẽ thu về được 0.1% từ giá sp
+  //(price * quantity)/1000;
+  function check(){
+      let price = parseFloat(document.getElementById("price").value);
+      let quantity = parseInt(document.getElementById("quantity").value);
+      let sumIncome ;
+
+      if(price > 0 && quantity >0){
+          sumIncome = (price * quantity)/1000
+      }
+      else {
+          sumIncome = "Please enter the correct price and quantity values"
+      }
+      document.getElementById("sumincome").innerHTML= sumIncome;
+  }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Days in the month</title>
+</head>
+<body>
+<input type="number" id="month">
+<button type="button" onclick="check()">Tính số ngày</button>
+<p id = "result"></p>
+</body>
+</html>
+<script>
+function check(){
+  let month = parseInt(document.getElementById("month").value);
+  let finalResult;
+  switch (month){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      finalResult = "Tháng có 31 ngày";
+          break;
+    case 2:
+      finalResult = "Tháng có 28 hoặc 29 ngày";
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      finalResult = "Tháng có 30 ngày";
+      break;
+    default:
+      finalResult = "Giá trị nhập vào phải từ 1 đến 12 "
+  }
+  document.getElementById("result").innerHTML = finalResult;
+}
+</script>

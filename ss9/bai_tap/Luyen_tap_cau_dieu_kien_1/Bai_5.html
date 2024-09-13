@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng dựa trên điểm thi</title>
+</head>
+<body>
+<p>Điểm bài kiểm tra</p>
+<input type="number" id="test">
+<p>Điểm bài thi giữa kỳ</p>
+<input type="number" id="exam">
+<p>Điểm bài thi cuối kỳ</p>
+<input type="number" id="finalexam"><br>
+<button type="button" onclick="check()">Check</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  //Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+  function check(){
+      let test = parseFloat(document.getElementById("test").value);
+      let exam = parseFloat(document.getElementById("exam").value);
+      let finalExam = parseFloat(document.getElementById("finalexam").value);
+      let result = (test + exam*2 + finalExam*3)/6;
+      let classification = document.getElementById("result");
+      if ((test >= 0 && test <= 10) && (exam >= 0 && exam <= 10) && (finalExam >= 0 && finalExam <= 10)){
+          if (result>= 8){
+              classification = "Loại Giỏi"
+          }
+          else if (result>= 7){
+              classification = "Loại Khá "
+          }
+          else if (result >=5){
+              classification = "Loại Trung Bình"
+          }
+          else{
+              classification = "Loại Yếu"
+          }
+          document.getElementById("result").innerHTML = "Xếp hạng: " + classification;
+      }
+      else {
+  document.getElementById("result").innerHTML = "*** Please enter true grade with each student";
+  }
+
+  }
+
+</script>
