@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại</title>
+</head>
+<body>
+<input type="number" id="time"><br>
+<button type="button" onclick="caculate()">Caculate</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  //Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+  //cước theo phút gọi: 10p đầu, 10p tiếp, 10 phút tiếp theo,..., nếu gọi 30p, 40p thì tổng tiền bn
+  function caculate(){
+      let time = parseFloat(document.getElementById("time").value);
+      let time1 = 0;
+      let time2 = 0;
+      let time3 = 0;
+      let totalPrice =0;
+      if(time > 0){
+          if ( time > 10){
+              time = time - 10;
+              time1 = 20;
+              if(time > 20){
+                  time3 = time - 20;
+                  time2 = 20;
+              } else{
+                  time2 = time;
+              }
+          } else {
+              time1 = time;
+          }
+          totalPrice = (time1*1000 + time2*1500 + time3*2000)
+      } else {
+          totalPrice = "Please enter the correct value."
+      }
+      document.getElementById("result").innerHTML= totalPrice;
+  }
+</script>

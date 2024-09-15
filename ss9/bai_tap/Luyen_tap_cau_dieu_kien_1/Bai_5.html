@@ -16,7 +16,13 @@
 </body>
 </html>
 <script>
-  //Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+  /*Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+  - Từ 8 điểm trở lên: Loại Giỏi
+  - Từ 6 điềm đến 7 điểm: Loại Khá
+  - 5 điềm: Trung Bình
+  - Nhỏ hơn 5: Loại Yếu
+  - Hệ số: Test(hệ số 1); Thi giữa kỳ(hệ số 2); Thi cuối kỳ ( hệ số 3)
+  */
   function check(){
       let test = parseFloat(document.getElementById("test").value);
       let exam = parseFloat(document.getElementById("exam").value);
@@ -27,10 +33,10 @@
           if (result>= 8){
               classification = "Loại Giỏi"
           }
-          else if (result>= 7){
+          else if (result>= 6){
               classification = "Loại Khá "
           }
-          else if (result >=5){
+          else if (result =5){
               classification = "Loại Trung Bình"
           }
           else{

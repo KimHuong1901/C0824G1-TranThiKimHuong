@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number"><br>
+<button type="button" onclick="check()">Check</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  //Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+ function check(){
+  let x = parseInt(document.getElementById("number").value);
+  let y;
+  if (x > 0){
+    y = "Lớn hơn 0 "
+  }
+  else if (x < 0){
+    y = "Nhỏ hơn 0"
+  }
+  else {
+    y = "Bằng 0"
+  }
+  document.getElementById("result").innerHTML = " Là số: " + y;
+ }
+</script>
