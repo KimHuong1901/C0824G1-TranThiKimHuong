@@ -23,17 +23,17 @@ c <input type="text" id="c"><br>
     let result2;
     if( a!=0){
       if (delta > 0 ){
-        result1 = (-b - delta)/2
-        result2 = (-b + delta)/2
+        result1 = (-b - delta)/2;
+        result2 = (-b + delta)/2;
       }
       else if(delta<0){
-        result1 = "Phương trình vô nghiệm"
-        result2 = ''
+        result1 = "Phương trình vô nghiệm";
+        result2 = '';
     }
     }
     else {
-      result1 = "Đây không phải phương trình bậc 2"
-      result2 =''
+      result1 = "Đây không phải phương trình bậc 2";
+      result2 ='';
     }
     document.getElementById("result").innerHTML= result1 + ";" + result2;
   }
