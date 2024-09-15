@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh gia dien</title>
+</head>
+<body>
+<input type="number" id="quantity"><br>
+<button type="button" onclick="caculate()">Caculate</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    /* Giá điện cho 20 số đầu là 3000/số
+      - 80 số tiếp theo 4000/số
+      - Nếu dùng hơn 100 số 5000/số */
+    function caculate(){
+        let quantity = parseFloat(document.getElementById("quantity").value);
+        let quantity1 = 0;
+        let quantity2 = 0;
+        let quantity3 = 0;
+        let totalPrice =0;
+        if(quantity > 0){
+            if ( quantity > 20){
+                quantity = quantity - 20;
+                quantity1 = 20;
+                if(quantity > 80){
+                    quantity3 = quantity - 80;
+                    quantity2 = 80;
+                } else{
+                    quantity2 = quantity;
+                }
+            } else {
+                quantity1 = quantity;
+            }
+            totalPrice = (quantity1*3000 + quantity2*4000 + quantity3*5000)
+        } else {
+            totalPrice = "Please enter the correct value."
+        }
+        document.getElementById("result").innerHTML= totalPrice;
+    }
+
+
+</script>

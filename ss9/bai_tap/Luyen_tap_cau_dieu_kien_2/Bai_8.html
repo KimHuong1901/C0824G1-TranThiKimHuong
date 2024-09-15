@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra tuoi</title>
+</head>
+<body>
+<input type="text" id = "age"><br>
+<button type="button" onclick ="check()">Check</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  function check(){
+    let age = parseInt(document.getElementById('age').value);
+    let result = document.getElementById("result");
+    if(age > 0 && age < 120){
+      result = "This is a person's age"
+    }
+    else {
+      result = "This isn't a person's age"
+    }
+    document.getElementById("result").innerHTML = result;
+  }
+
+</script>

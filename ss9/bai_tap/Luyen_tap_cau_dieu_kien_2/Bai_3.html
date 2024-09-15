@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình vuông</title>
+</head>
+<body>
+<p>Enter the value to caculate:</p>
+<input type="text" id="width">
+<button type="button" onclick="check()">Caculate</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function check(){
+        let squareEdge = parseFloat(document.getElementById("width").value);
+        let result;
+        if(squareEdge > 0){
+            result = squareEdge * squareEdge
+        }
+        else {
+            result = "Please enter true value to caculate"
+        }
+        document.getElementById("result").innerHTML= result;
+    }
+
+</script>

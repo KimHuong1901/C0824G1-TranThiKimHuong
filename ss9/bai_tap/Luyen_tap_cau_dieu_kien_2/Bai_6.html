@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 1</title>
+</head>
+<body>
+<input type="text" id="a">x+
+<input type="text" id="b">=0<br>
+<button type="button" onclick="caculate()">Caculate</button>
+<p id = "result"></p>
+</body>
+</html>
+<script>
+  //ax+b+0
+  function caculate(){
+    let a =parseFloat(document.getElementById("a").value);
+    let b =parseFloat(document.getElementById("b").value);
+    let result;
+    if(a!=0){
+      result = -b/a;
+    }
+    else{
+      result = "Phuong trinh vo nghiem"
+    }
+    document.getElementById("result").innerHTML= result;
+  }
+</script>
