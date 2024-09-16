@@ -16,12 +16,16 @@ function check(){
   let a = parseFloat(document.getElementById("a").value);
   let b = parseFloat(document.getElementById("b").value);
   let y = document.getElementById("result");
-  if (a%b == 0){
-    y = "a chia hết cho b"
+  if (b > 0){
+      if (a%b == 0){
+        y = "a divisable by b"
+        } else{
+        y = "a isn't divisable by b"
+        }
+  } else{
+      y = "Can't caculate divided with second value is 0"
   }
-  else{
-    y = "a không chia hết cho b"
-  }
+
   document.getElementById("result").innerHTML = y;
 }
 </script>
