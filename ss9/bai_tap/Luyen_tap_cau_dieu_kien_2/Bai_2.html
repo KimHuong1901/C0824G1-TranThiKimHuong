@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi don vi nhiet do</title>
+</head>
+<body>
+<input type="number" id="met" value=""> m <br>
+<button onclick="chuyenDoi()">Change</button>
+<p id = "feet"></p>
+</body>
+</html>
+<script>
+    //ft =m * 3.2808
+    function chuyenDoi() {
+        let m = +parseFloat(document.getElementById("met").value);
+        let result;
+        if(m>0){
+            result = m * 3.2808 + " feet";
+        } else {
+            result = "Please enter correct value"
+        }
+        document.getElementById("feet").innerHTML = result;
+        }
+</script>
