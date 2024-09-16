@@ -13,17 +13,17 @@
 <script>
   //Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
  function check(){
-  let x = parseInt(document.getElementById("number").value);
-  let y;
-  if (x > 0){
-    y = "Lớn hơn 0 "
+  let number = parseInt(document.getElementById("number").value);
+  let result;
+  if (number > 0){
+      result = "Lớn hơn 0 "
   }
-  else if (x < 0){
-    y = "Nhỏ hơn 0"
+  else if (number < 0){
+      result = "Nhỏ hơn 0"
   }
   else {
-    y = "Bằng 0"
+      result = "Bằng 0"
   }
-  document.getElementById("result").innerHTML = " Là số: " + y;
+  document.getElementById("result").innerHTML = " Là số: " + result;
  }
 </script>
