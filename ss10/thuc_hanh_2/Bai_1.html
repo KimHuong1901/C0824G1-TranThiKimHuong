@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1.
+    // Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó.
+    let number = prompt("Enter number; ")
+    let total = '';
+    while (number != -1){
+        number = prompt("Enter number: ")
+        alert(number);
+        total = total+number;
+    }
+    document.write(total);
+</script>
