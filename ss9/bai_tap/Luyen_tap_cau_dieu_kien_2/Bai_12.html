@@ -20,18 +20,21 @@
   // số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
   //P*(1+r/n)^n*t, P>0,r>0, n = 12 tháng, t là số năm
   function caculate(){
-    let money = parseFloat(document.getElementById("money").value);
-    let year = parseFloat(document.getElementById("year").value);
-    let rate = parseFloat(document.getElementById("rate").value);
+    let money = document.getElementById("money").value;
+    let year = document.getElementById("year").value;
+    let rate = document.getElementById("rate").value;
     let result;
     let n = 12;
-    if(money > 0 && rate >0 && year > 0){
+    if(isNaN(money) || isNaN(year) || isNaN(rate)){
+          result = "Please enter number"
+      }
+    else if(money > 0 && rate >0 && year > 0){
       result= money*Math.pow((1+(rate*0.01)/12), (12*year))
     }
     else{
       result = "Please enter correct value"
     }
-    document.getElementById("result").innerHTML = "Compound interest is: " + result.toFixed(2);
+    document.getElementById("result").innerHTML = result;
 
   }
 </script>

@@ -17,11 +17,14 @@
     let a =parseFloat(document.getElementById("a").value);
     let b =parseFloat(document.getElementById("b").value);
     let result;
-    if(a!=0){
-      result = -b/a;
-    }
-    else{
-      result = "Phuong trinh vo nghiem"
+    if(a!=0 ){
+        if ( b != 0){
+            result = -b/a;
+        } else {
+            result = "Phuong trinh co vo so nghiem";
+        }
+    } else{
+      result = "Phuong trinh vo nghiem";
     }
     document.getElementById("result").innerHTML= result;
   }

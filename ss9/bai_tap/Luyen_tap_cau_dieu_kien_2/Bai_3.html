@@ -13,9 +13,12 @@
 </html>
 <script>
     function check(){
-        let squareEdge = parseFloat(document.getElementById("width").value);
+        let squareEdge = document.getElementById("width").value;
         let result;
-        if(squareEdge > 0){
+        if ( isNaN(squareEdge)){
+            result = "Please enter the number"
+        }
+        else if(squareEdge > 0){
             result = squareEdge * squareEdge
         }
         else {

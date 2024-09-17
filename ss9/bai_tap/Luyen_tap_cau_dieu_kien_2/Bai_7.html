@@ -26,6 +26,10 @@ c <input type="text" id="c"><br>
         result1 = (-b - delta)/2;
         result2 = (-b + delta)/2;
       }
+      else if(delta == 0){
+        result1 = "-b/(2*a)";
+        result2 = ''
+      }
       else if(delta<0){
         result1 = "Phương trình vô nghiệm";
         result2 = '';
