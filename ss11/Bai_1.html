@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let dataBox= "<table border =1 width = 200 height = 50"
+    for ( i = 1; i < 10; i++){
+        dataBox = dataBox +'<tr>'
+        for ( j = 2; j < 10; j++){
+            dataBox = dataBox + "<td>" + j + "*" + i + "=" + i *j +"</td>"
+        }
+        dataBox = dataBox + "</tr>"
+    }
+    document.write(dataBox);
+</script>
