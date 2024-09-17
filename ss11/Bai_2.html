@@ -5,17 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-
 </body>
 </html>
 <script>
-    //Cho phép hiển thị 20 số nguyên tố đầu tiên.
-    let count;
-    let number = prompt("Enter number:")
- for (let i = 2; i <= number/2; i++){
-     if(number/2 %i == 0 && count <= 20){
-         count++
-         document.write(number)
-     }
- }
+    let n = 2;
+    let result = n;
+    let count = 0;
+
+    let flag = true;//true: so nguyen to; false: khong phai so nguyen to
+    while (count <= 20){
+
+        flag = true;
+        for ( let i =2; i <= n/2; i++){
+            if(n%i == 0){
+                result = "Khong phai so nguyen to";
+                flag = false;
+                break;
+            }
+        }
+        if(flag == true){
+            document.write( n + "<br>");
+            count++;
+        }
+        n++;
+    }
+
+
+
 </script>
