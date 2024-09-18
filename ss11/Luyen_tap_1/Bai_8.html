@@ -9,5 +9,28 @@
 </body>
 </html>
 <script>
-
+function Play(){
+    let num1 = prompt("Enter start value");
+    num1 = parseInt(num1);
+    let num2 = prompt("Enter end value")
+    num2 = parseInt(num2);
+    let numRandom;
+    let numActual;
+    let result;
+        numRandom = Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
+    for(let i = 1; i<=3; i++){
+     numActual = prompt("Enter the expected");
+     numRandom = parseInt(numRandom);
+         if (numRandom != numActual){
+            result = alert("Oh what a pity. Let's try again.");
+             if( i == 3){
+                 result = "You lose";
+             }
+         } else {
+             result = "Congratulations";
+            break;
+         }
+    }
+    document.write(result);
+}
 </script>
