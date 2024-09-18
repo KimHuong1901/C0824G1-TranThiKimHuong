@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In Hình Chữ Nhật Rỗng</title>
+  <style>
+    pre {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+<pre id="result"></pre>
+
+<script>
+  let length = 15;
+  let width = 7;
+  let result = '';
+  for (let i = 0; i < width; i++) {
+    let row = '';
+    for (let j = 0; j < length; j++) {
+      if (i == 0 || i == width - 1 || j == 0 || j == length - 1) {
+        row += '* ';
+      } else {
+        row += '  ';
+      }
+    }
+    result += row + "<br>";
+  }
+  document.getElementById("result").innerHTML = result;
+</script>
+
+</body>
+</html>

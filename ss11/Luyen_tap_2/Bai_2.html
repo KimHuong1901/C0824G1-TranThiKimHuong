@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //Tính giai thừa của một số nguyên dương
+  let num = prompt("Enter the number")
+  result = 1;
+  if (!isNaN(num)){
+      if (num > 0){
+         for (let i = 1; i <= num; i++){
+             result *= i;
+         }
+      } else {
+          result = "Day khong phai la so nguyen duong"
+      }
+  } else {
+      result = "Day khong phai là mot so"
+  }
+  document.write(result);
+</script>
