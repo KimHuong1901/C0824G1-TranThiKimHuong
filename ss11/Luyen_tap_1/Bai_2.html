@@ -9,13 +9,16 @@
 </body>
 </html>
 <script>
+    let nhietdo;
     while (true){
-        let nhietdo = prompt("Please enter numnber");
+        nhietdo = prompt("Please enter numnber");
         if(nhietdo > 100){
             alert("Giam nhiet do")
         }
         else if(nhietdo < 20){
             alert("Tang nhiet do")
+        } else if(isNaN(nhietdo)){
+            alert("Nhap lai gia tri nhiet do")
         } else {
             break;
         }
