@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  // let array = [];
+  // // array[0] = 1;
+  // // array[1] = 1;
+  // // array[2] = 1;
+  // // document.write(array[0]);
+  // // document.write(array[1]);
+  // let num = 123;
+  // let a;
+  // a = 123%10;
+  // b = 123/10;
+  // b = parseInt(b);
+  // let d = b%10;
+  // let c = b/10;
+  // c = parseInt(c);
+  //
+  // document.write(a +"," +b + "," +d +"," +c);
+  //Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn.
+  // Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.: a0/2 -; a1/a2 -
+  let num = prompt("Enter number: ");
+  let count = num.length;
+  let numArr = [];
+  let result;
+  num = parseInt(num);
+  let number;
+  for (let i = count - 1; i >= 0; i--){
+    number = num%10;
+    numArr[i] = number;
+    num /= 10;
+    num = parseInt(num);
+  }
+  for (let i in numArr){
+  }
+  // for( i = 0; i <= count -1; i++){
+  //   if( numArr[i] %2 == 0 && numArr[i+1] %2 == 0 ){
+  //     result = numArr[i] + "-" + numArr[i+1];
+  //   }
+  // }
+  for( let j = 0; j <= count -1; j++){
+    if (numArr[j] %2 == 0){
+      if(numArr[j+1] %2 == 0){
+        result = numArr[j] + "-";
+      }else {
+        result = numArr[j] ;
+      }
+    } else{
+      result = numArr[j];
+    }
+    document.write(result);
+  }
+
+</script>

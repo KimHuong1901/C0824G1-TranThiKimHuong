@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let numArr1 = [];
+  let numArr2 = [];
+  let data1 ='';
+  let data2 ='';
+  for ( let i = 0; i < 10; i++){
+    data1 = + prompt("Enter the number for array1: ");
+    numArr1[i] = data1;
+  }
+  for ( let j = 0; j < 10; j++){
+    data2 = + prompt("Enter the number for array2: ");
+    numArr2[j] = data2;
+  }
+  let numArr3 = numArr1.concat(numArr2);
+  document.write(numArr3);
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  //một mảng số nguyên gồm 10 phần tử,
+ // nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không
+  //nếu V thuộc mảng đã cho xoá V khỏi mảng
+  // (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,
+  // và gán 0 cho phần tử cuối cùng của mảng)
+  let numArr = [];
+  let data = '';
+  for ( let i = 0; i < 10; i++){
+    data = +prompt("Enter the number: ");
+    numArr[i] = data;
+  }
+  numArr.push(0);
+  let randomNum = +prompt("Enter the number you want: ")
+  document.getElementById("result").innerHTML = numArr.filter(checkRequied);
+  function checkRequied(num){
+    return num !== randomNum;
+  }
+</script>

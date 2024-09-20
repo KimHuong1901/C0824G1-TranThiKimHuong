@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //nhập/tạo phần tử số nguyên V
+  //Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+  let numArr =[];
+  let data ='';
+  let result;
+  for ( let i = 0; i < 10; i++){
+    data = + prompt("Enter the number");
+    numArr[i] = data;
+  }
+  let random = +prompt("Enter the number you want: ")
+  for ( let i = 0; i < 10; i++){
+    if ( random === numArr[i]){
+      result = random + " is in the array";
+      break;
+    }
+    else {
+      result = random + " is not in the array";
+    }
+  }
+  document.write(result);
+
+</script>

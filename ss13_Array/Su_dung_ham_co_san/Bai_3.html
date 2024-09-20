@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let data = prompt("Enter the value");
+    let dataArr = data.split('');
+    let series = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let result;
+    for ( let i = 0; i < dataArr.length; i++){
+        result = series.indexOf(dataArr[i])
+        if ( result > 0){
+            dataArr[i] = dataArr[i].toLowerCase();
+        } else {
+            dataArr[i] = dataArr[i].toUpperCase();
+        }
+       document.write(dataArr[i]);
+    }
+
+
+</script>

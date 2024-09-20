@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // Viết chương trình khởi tạo mảng số nguyên.
+    // Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+    let numArr = [];
+    let data = '';
+    let num ='';
+    let sum ='';
+    let count = +prompt("Enter total number: ");
+    for ( let i = 0; i < count; i++){
+       data = +prompt("Enter number");
+        data = parseInt(data);
+        sum += data;
+       numArr[i] = data;
+
+    }
+    document.write(sum);
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let engArr = ["flower", "apple", "orange", "durian"];
+    let vieArr = ["hoa", "táo", "cam", "sầu riêng"];
+    let data = prompt("Enter the world: ");
+    let result;
+    let j = 0;
+    let i = 0;
+    while ( i < engArr.length){
+        if (data == engArr[i]){
+            result = vieArr[j];
+            break;
+        } else {
+            result = 'Not found';
+        }
+        i++;
+        j++;
+    }
+    document.write(result);
+</script>

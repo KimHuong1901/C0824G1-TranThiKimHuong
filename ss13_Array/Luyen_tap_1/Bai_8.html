@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+  // Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+  let numArr = [];
+  let data = '';
+  for ( let i = 0; i < 10; i++){
+    data = +prompt("Enter the number");
+    numArr[i] = data;
+  }
+  numArr.sort(function (a, b){
+    return b - a});
+  document.write(numArr);
+  //arr.sort(function (a, b) {
+  //return a - b;
+</script>
