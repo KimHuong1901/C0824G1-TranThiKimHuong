@@ -15,8 +15,14 @@
   let data ='';
   let result;
   for ( let i = 0; i < 10; i++){
-    data = + prompt("Enter the number");
-    numArr[i] = data;
+    data = prompt("Enter the number");
+      data = parseInt(data);
+      if (!isNaN(data)){
+          numArr[i] = data;
+      }else {
+          data ='';
+          i--;
+      }
   }
   let random = +prompt("Enter the number you want: ")
   for ( let i = 0; i < 10; i++){

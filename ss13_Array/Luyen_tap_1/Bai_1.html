@@ -16,8 +16,14 @@
   let i;
   let result;
   for ( let i = 0; i < 10; i++){
-      data = +prompt("Enter the number: ");
+      data = prompt("Enter the number: ");
+      data = parseInt(data);
+      if (!isNaN(data)){
       numArr[i] = data;
+      }else {
+          data ='';
+          i--;
+      }
   }
   for (i = 0; i < 10; i++){
       if (numArr[i] >= 10){

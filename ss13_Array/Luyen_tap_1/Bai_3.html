@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-
+<p id="result"></p>
 </body>
 </html>
 <script>
@@ -14,14 +14,26 @@
     let numArr = [];
     let data = '';
     let num ='';
-    let sum ='';
+    let sum =0;
     let count = +prompt("Enter total number: ");
     for ( let i = 0; i < count; i++){
-       data = +prompt("Enter number");
+       data = prompt("Enter number");
+        if (!isNaN(data)){
         data = parseInt(data);
-        sum += data;
-       numArr[i] = data;
-
+            numArr[i] = data;
+            sum += data;
+        } else {
+            data='';
+            i--;
+        }
     }
-    document.write(sum);
+    let max = numArr[0];
+    let average = sum/(count -1);
+    let result = average.toFixed(2);
+    for (let i = 1; i < count; i++){
+        if ( max < numArr[i]){
+            max = numArr[i];
+        }
+    }
+    document.getElementById("result").innerHTML = "Average is: " + result + ".Max value is: " + max;
 </script>

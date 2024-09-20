@@ -14,12 +14,24 @@
   let data1 ='';
   let data2 ='';
   for ( let i = 0; i < 10; i++){
-    data1 = + prompt("Enter the number for array1: ");
-    numArr1[i] = data1;
+    data1 =  prompt("Enter the number for array1: ");
+      data1 = parseInt(data1);
+      if (!isNaN(data1)){
+          numArr1[i] = data1;
+      }else {
+          data1 ='';
+          i--;
+      }
   }
   for ( let j = 0; j < 10; j++){
-    data2 = + prompt("Enter the number for array2: ");
-    numArr2[j] = data2;
+    data2 = prompt("Enter the number for array2: ");
+      data2 = parseInt(data2);
+      if (!isNaN(data2)){
+          numArr2[j] = data2;
+      }else {
+          data2 ='';
+          j--;
+      }
   }
   let numArr3 = numArr1.concat(numArr2);
   document.write(numArr3);

@@ -17,8 +17,14 @@
   let numArr = [];
   let data = '';
   for ( let i = 0; i < 10; i++){
-    data = +prompt("Enter the number: ");
-    numArr[i] = data;
+    data = prompt("Enter the number: ");
+      data = parseInt(data);
+      if (!isNaN(data)){
+          numArr[i] = data;
+      }else {
+          data ='';
+          i--;
+      }
   }
   numArr.push(0);
   let randomNum = +prompt("Enter the number you want: ")

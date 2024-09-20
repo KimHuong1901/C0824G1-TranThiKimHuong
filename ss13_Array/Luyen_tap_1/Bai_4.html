@@ -14,8 +14,14 @@
   let data ='';
   let count = +prompt("Enter total number: ");
   for( let i = 0; i < count; i++){
-    data = +prompt("Enter number: ");
-    numArr[i] = data;
+    data = prompt("Enter number: ");
+    data = parseInt(data);
+      if (!isNaN(data)){
+          numArr[i] = data;
+      }else {
+          data ='';
+          i--;
+      }
   }
   let newArr = numArr.reverse();
   document.write(newArr);
