@@ -26,7 +26,7 @@
   //
   // document.write(a +"," +b + "," +d +"," +c);
   //Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn.
-  // Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.: a0/2 -; a1/a2 -
+  // Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.:
   let num = prompt("Enter number: ");
   let count = num.length;
   let numArr = [];
@@ -41,11 +41,6 @@
   }
   for (let i in numArr){
   }
-  // for( i = 0; i <= count -1; i++){
-  //   if( numArr[i] %2 == 0 && numArr[i+1] %2 == 0 ){
-  //     result = numArr[i] + "-" + numArr[i+1];
-  //   }
-  // }
   for( let j = 0; j <= count -1; j++){
     if (numArr[j] %2 == 0){
       if(numArr[j+1] %2 == 0){
