@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
 
 </body>
 </html>
 <script>
-  let newArr = [];
-  let data ='';
-  let count = +prompt("Enter total value: ")
-  for ( let i = 0; i < count; i++ ){
-    data = prompt("Enter value: ")
-    newArr[i] = data;
+  //Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng
+  let numArr = [
+    ["a", "b", "c", "d"],
+    [8, 9, 10, 11],
+    ["e", "f", "g", "h"],
+    [12, 13, 14, 15],
+    ["i", "j", "k", "l"]
+  ];
+  for ( let i in numArr){
+    document.write ("Row" + i);
+    for ( let j in numArr[i]) {
+      document.write( "<br>" + numArr[i][j] + "<br>");
+    }
   }
-  newArr.reverse();
-  document.write(newArr.join(''));
 </script>
