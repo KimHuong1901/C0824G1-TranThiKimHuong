@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Nhập 1 mảng từ bàn phím với độ dài n
+    //Hiện thị mảng sau khi thêm mới các phần tử
+    //Kiểm tra mảng vừa nhập. Nếu số phần tử chẵn bằng số phần tử lẻ thì hiện thị thông báo “OK”,
+    // nếu không thoả mãn thì hiện thị “NO”
+    let numArr = [];
+    let data = '';
+    let count = +prompt("Enter total value: ");
+    let even = 0;
+    let odd = 0;
+    let result ='';
+    for ( let i = 0; i < count; i++){
+        data = prompt("Enter the number: ");
+        data = parseFloat(data);
+        numArr[i] = data;
+        document.write(numArr[i]);
+        if( numArr[i] %2 === 0){
+            even ++
+        } else {
+            odd ++
+        }
+        if ( even == odd){
+            result = "OK";
+        } else {
+            result = "NO";
+        }
+    }
+    document.write("<br>" + result);
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài tập 4
+    //Nhập 1 mảng 2 chiều từ bàn phím với độ dài m*n. Với m và n nhập từ bàn phím
+    //Hiện thị mảng sau khi thêm mới các phần tử
+    //Tính tổng cac phần tử 2 đường chéo của mảng, 0;0: hàng 0 cột 0
+let numArr = [][];
+let dataRow ='';
+let dataColumn ='';
+let row = +prompt("Enter the total row: ");
+let column = + prompt("Enter the total column: ");
+for ( let i = 0; i < row; i++ ){
+    dataRow = prompt("Enter the value: ");
+    dataRow = parseFloat(dataRow);
+    numArr[i] = dataRow;
+    for ( let j = 0; j < column; j++){
+        dataColumn =  prompt("Enter the value: ");
+        dataColumn = parseFloat(dataColumn);
+        numArr[j] = dataColumn;
+        document.write(numArr[i][j]);
+    }
+
+}
+
+</script>

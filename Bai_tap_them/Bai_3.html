@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //Nhập 1 mảng số từ bàn phím với độ dài n
+  //Hiện thị mảng sau khi thêm mới các phần tử
+  //Tính tổng các phần tử tử chẵn và ở vị trí lẻ
+let numArr = [];
+let data ='';
+let sum = 0;
+let count = +prompt("Enter total value: ");
+for ( let i = 0; i < count; i++){
+  data = prompt("Enter the number");
+  data = parseFloat(data);
+  if (!isNaN(data)){
+    numArr[i] = data;
+    document.write(numArr[i]);
+  } else {
+    i--;
+  }
+}
+  for ( let i = 1; i < count; i += 2){
+    if (numArr[i] %2 === 0){
+      typeof numArr[i]
+      sum += numArr[i];
+      typeof sum;
+    }
+  }
+  document.write("<br>" + "Tổng giá trị chẵn tại vị trí lẻ là: " + sum);
+</script>

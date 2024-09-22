@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //Viết chương trình nhập các phần tử cho mảng sao cho không có phần tử nào trùng nhau.
+  // Nếu phần tử nào trùng thì yêu cầu nhập lại (edited)
+  let numArr = [];
+  let data ='';
+  let count = +prompt("Enter total number: ");
+  for ( let i = 0; i < count; i++){
+    data = prompt("Enter the value: ");
+    numArr[i] = data;
+    if (numArr[i] === numArr[i-1]){
+      data = prompt("Enter the value again: ");
+      i--;
+    }
+  }
+  document.write(numArr);
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id = 'result'></p>
+</body>
+</html>
+<script>
+    //Nhập 1 mảng từ bàn phím với độ dài n
+    //Hiện thị mảng sau khi thêm mới các phần tử
+    //Hiện thị các số chính phương có trong mảng ( Số chính phương là các số ví dụ 1,4,9,16,25,36,49……)
+    let numArr = [];
+    let data = '';
+    let value ='';
+    let result ='';
+    let count = +prompt("Enter the total: ")
+    for ( let i = 0; i < count; i++){
+        data = +prompt("Enter the number:")
+        numArr[i] = data;
+        document.write(numArr[i]);
+        value = Math.sqrt(numArr[i]);
+        if ( Number.isInteger(value)){
+            result += numArr[i] + " ";
+        }
+    }
+    document.write("<br>" + result);
+</script>
