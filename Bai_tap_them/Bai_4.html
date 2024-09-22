@@ -12,23 +12,32 @@
     //Bài tập 4
     //Nhập 1 mảng 2 chiều từ bàn phím với độ dài m*n. Với m và n nhập từ bàn phím
     //Hiện thị mảng sau khi thêm mới các phần tử
-    //Tính tổng cac phần tử 2 đường chéo của mảng, 0;0: hàng 0 cột 0
-let numArr = [][];
-let dataRow ='';
-let dataColumn ='';
+    //Tính tổng cac phần tử 2 đường chéo của mảng,
+let numArr = [];
+let data ='';
 let row = +prompt("Enter the total row: ");
-let column = + prompt("Enter the total column: ");
+let column = row;
+let sum = 0;
 for ( let i = 0; i < row; i++ ){
-    dataRow = prompt("Enter the value: ");
-    dataRow = parseFloat(dataRow);
-    numArr[i] = dataRow;
+    numArr[i] = new Array(column);
+}
+for ( let i = 0; i < row; i++){
     for ( let j = 0; j < column; j++){
-        dataColumn =  prompt("Enter the value: ");
-        dataColumn = parseFloat(dataColumn);
-        numArr[j] = dataColumn;
+     data = prompt("Enter the value: ");
+     data = parseFloat(data)
+      numArr[i][j] = data;
         document.write(numArr[i][j]);
     }
-
+    document.write("<br>");
 }
+for ( let i = 0; i < column; i++){
+    sum += numArr[i][i];
+}
+for ( let i = 0; i < column; i++){
+    for ( let j = column -1; j >=0; j--){
+       sum += numArr[i][j];
+    }
+}
+document.write(sum);
 
 </script>
