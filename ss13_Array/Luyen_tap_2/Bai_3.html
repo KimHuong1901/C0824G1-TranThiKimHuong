@@ -5,7 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-
 </body>
 </html>
 <script>
@@ -18,7 +17,13 @@
     let total = +prompt("Enter total value: ")
     for ( let i = 0; i < total; i++){
         data = prompt("Enter the value: ");
+        if (data.length == 1){
         numArr[i] = data;
+        } else {
+            alert("Enter incorrect, again");
+            i--;
+            count --;
+        }
         minArr = numArr[i].split('');
         for ( let j in minArr){
             minArr[j] = parseFloat(minArr[j]);
