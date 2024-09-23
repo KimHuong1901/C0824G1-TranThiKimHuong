@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+  // document.write(numArr);
+  let intArr = [];
+  let data = '';
+  let min = 0;
+  for ( let i = 0; i <=2; i++){
+      data = +prompt("Enter the value: ");
+      let check = Number.isInteger(data)
+      if (check == true){
+          intArr[i] = data;
+      } else {
+          alert("Value isn't correct, please enetr again:")
+          i--;
+      }
+  }
+    min = intArr[0];
+  for ( let i = 0; i <=2; i++){
+      if ( minNum(intArr[i], intArr[i+1])){
+          min = intArr[i+1];
+      }
+  }
+  document.write(min);
+  function minNum(num1, num2){
+      let result = false; // num1 nhỏ hơn num2
+      if (num1 > num2){
+          result = true;// num2 nhỏ hơn num1
+      }
+      return result;
+  }
+</script>

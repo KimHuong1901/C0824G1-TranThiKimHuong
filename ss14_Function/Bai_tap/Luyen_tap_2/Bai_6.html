@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    // Nếu là nguyên dương trả về true, ngược lại trả về false.
+    let data = prompt("Enter the number: ");
+    let number = parseFloat(data);
+    let result = checkIntP(number);
+   document.write(result);
+    function checkIntP(num){
+        let result = '';
+        let check = Number.isInteger(num);
+        if (check == true && num > 0){
+              result = true
+            } else {
+                result = false;
+            }
+        return result;
+    }
+</script>

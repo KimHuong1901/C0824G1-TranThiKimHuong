@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    let numArr = [];
+    let count = +prompt ("Enter total value");
+    let data = '';
+    for (let i = 0; i < count; i++){
+        data = prompt("Enter the number: ")
+        checknum(data)
+        numArr[i] = data;
+    }
+    document.write(numArr);
+    function checknum(num){
+        if (!isNaN(num)){
+            num = parseInt(num);
+        } else {
+            data = '';
+            i--;
+        }
+    }
+</script>

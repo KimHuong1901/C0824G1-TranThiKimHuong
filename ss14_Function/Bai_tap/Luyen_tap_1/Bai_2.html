@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="numberCaculate()">
+
+</body>
+</html>
+<script>
+  //Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.
+  // Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+  function numberCaculate(num){
+    return num +1;
+  }
+  let number = +prompt("Enter the number");
+  let result = 0;
+  if (!isNaN(number)){
+  result = numberCaculate(number);
+  } else {
+      result = "Can't caculate with the value is not a number."
+  }
+  alert(result);
+</script>

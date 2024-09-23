@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  //Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+  //π(d/2)^2
+  let r = prompt("Enter the radius");
+  let per = perimeter(r);
+  let result1 = per.toFixed(3)
+  let acr = acreage(r);
+  let result2 = acr.toFixed(3)
+  document.getElementById("result").innerHTML = "Perimeter is: "+ result1 +"<br>" + "Acreage is: " + result2;
+  function perimeter(num){
+    return 2*Math.PI*num;
+  }
+  function acreage(num){
+    return Math.PI* Math.pow(num,2);
+  }
+</script>

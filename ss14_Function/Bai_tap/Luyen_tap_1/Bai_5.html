@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body oninput="checkName(name)">
+
+</body>
+</html>
+<script>
+    // Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus.
+    // Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo
+    let nameStar =["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constel =["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let name = prompt("Enter the name Star: ");
+    let result = checkName(name);
+    document.write(result);
+    function checkName(name){
+        let i = 0;
+        let find;
+        while (i < nameStar.length){
+            if (name == nameStar[i]) {
+                find = constel[i]
+                break;
+            } else {
+                find = "Not found";
+            }
+            i++;
+        }
+        return find;
+    }
+
+</script>

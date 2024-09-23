@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
+    // hiển thị hộp thoại thông báo cho người dùng.
+    // Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    function inputNum(x,y){
+            return x+y;
+    }
+    let num1 = +prompt("Enter the value: ");
+    let num2 = +prompt("Enter the value: ");
+    let result = 0;
+    if (!isNaN(num1) && !isNaN(num2)){
+        if (num1 < num2){
+        result = inputNum(num1,num2);
+        } else {
+            result = "Number 1 greater than number 2";
+        }
+    } else if (isNaN(num1) || isNaN(num2)){
+        result = "Value isn't a number"
+    }
+    alert(result);
+</script>

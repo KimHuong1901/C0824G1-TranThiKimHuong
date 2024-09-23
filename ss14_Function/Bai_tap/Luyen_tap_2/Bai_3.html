@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.n! = 1*2*3*...*n
+  let number = +prompt("Enter the number");
+  number = parseInt(number);
+  let caculate = checkInt(number);
+  document.write(caculate);
+  function checkInt(num){
+      let check = Number.isInteger(num)
+      if (check == true){
+       return factorial(num);
+      }
+  }
+  function factorial(num){
+    let result = 1;
+    for (let i = 1; i <= num; i++){
+        result *= i;
+    }
+    return result;
+  }
+</script>
