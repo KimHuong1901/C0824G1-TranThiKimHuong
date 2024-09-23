@@ -15,7 +15,7 @@
     let result;
     for ( let i = 0; i < dataArr.length; i++){
         result = series.indexOf(dataArr[i])
-        if ( result > 0){
+        if ( result >= 0){
             dataArr[i] = dataArr[i].toLowerCase();
         } else {
             dataArr[i] = dataArr[i].toUpperCase();
