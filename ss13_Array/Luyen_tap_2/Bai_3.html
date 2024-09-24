@@ -12,7 +12,6 @@
     // Chương trình này đếm số ký tự số trong mảng.
     let numArr = [];
     let data;
-    let minArr =[];
     let count = 0;
     let total = +prompt("Enter total value: ")
     for ( let i = 0; i < total; i++){
@@ -22,15 +21,11 @@
         } else {
             alert("Enter incorrect, again");
             i--;
-            count --;
+            continue;
         }
-        minArr = numArr[i].split('');
-        for ( let j in minArr){
-            minArr[j] = parseFloat(minArr[j]);
-            if (!isNaN(minArr[j])){
+            if (!isNaN(numArr[i])){
                 count++;
             }
-        }
     }
     document.write(count);
 </script>
