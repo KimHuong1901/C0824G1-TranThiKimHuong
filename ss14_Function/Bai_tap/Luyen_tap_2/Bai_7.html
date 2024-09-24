@@ -10,22 +10,22 @@
 </html>
 <script>
   //Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
-let num1 = +prompt("Enter the number1: ");
-let num2 = +prompt("Enter the number 2");
-let check1 = Number.isInteger(num1);
-let check2 = Number.isInteger(num2);
+let num1 = +prompt("Enter the number1");
+let num2 = +prompt("Enter the number2");
 let result;
-// for ( let i = 0; i <2; i++){
-//     num[i] = +prompt("Enter the number1: ");
-//     if (check1 == true && check2 == true){
-//         result = inNum(num1, num2);
-//     } else if (check1 != true) {
-//         result = alert("Value incorrect");
-//         num1 = +prompt("Enter the number1: ");
-//         i--
-//     }
-// }
-  document.write(result)
+  while (true){
+      if ( Number.isInteger(num1)){
+          if (Number.isInteger(num2)){
+              result = inNum(num1, num2);
+              break;
+          } else{
+              num2 = +prompt("Enter the number2");
+          }
+      }else {
+          num1 = +prompt("Enter the number1");
+      }
+  }
+  document.write(result);
 function inNum (a, b){
        return [a, b] = [b, a];
 }
