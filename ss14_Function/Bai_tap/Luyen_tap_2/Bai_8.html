@@ -11,24 +11,31 @@
 <script>
     //Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
     let count = +prompt("Enter the total value");
-    let numArr = intArr(count);
-    let changeArr = numArr.reverse();
+    let numIntArr = '';
+    let changeArr ='';
+    while (true){
+        if (!isNaN(count) && count > 0){
+            numIntArr = enterIntArr(count);
+            break;
+        } else {
+            count = +prompt("Incorrect value, enter again");
+        }
+    }
+    changeArr = numIntArr.reverse();
     document.write(changeArr);
-    function intArr(num){
-        let inArr = [];
+    function enterIntArr(num){
+        let intArr = [];
         let data ='';
-        let check;
         for (let i = 0; i < num; i++){
             data = +prompt("Enter the number");
-            check = Number.isInteger(data);
-            if (check == true){
-                inArr[i] = data;
+            if (Number.isInteger(data)){
+                intArr[i] = data;
             }else {
                 alert("Incorrect value, enter again");
                 i--;
             }
         }
-        return inArr;
+        return intArr;
     }
 
 </script>

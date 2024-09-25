@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<input style="width: 400px; height: 30px" type="text" id ='inProduct'>
+<button  style="background-color: forestgreen; color: white; height: 30px; width: 50px" type ="button"  onclick="add()">Add</button>
+<h2> Display All Product</h2>
+<h4 style="text-align: left">Product Name</h4>
+<p id="result"></p>
+<button style="width: 50px; height: 30px; background-color: green; color: white" type="button" onclick="edit()">Edit</button>
+<button style="width: 50px; height: 30px; background-color: green; color: white" type="button" onclick="dele()">Delete</button>
+
+</body>
+</html>
+<script>
+    //mảng 0 phần tử: thêm mới phần tử
+    // một phần tử chứa: tên sp button "edit"; button "delete"
+    let proArr = [];
+
+   // document.getElementById("result").innerHTML = name;
+   function add(){
+       let name = document.getElementById("inProduct").value;
+       let result = document.getElementById("result").value;
+       document.getElementById("result").innerHTML = result + edit() + dele();
+   }
+   function edit(){
+       let change = prompt("Enter the name product: ");
+       proArr[i]= change;
+       return change
+   }
+   function dele (){
+       proArr[i] = '';
+       return '';
+    }
+</script>

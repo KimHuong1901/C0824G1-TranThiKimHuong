@@ -11,16 +11,24 @@
 <script>
   //Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
   // Nếu là ký tự số hàm trả về true, ngược lại trả về false
-  let number = prompt("Enter the number")
-  let result = checkNum(number);
+  let number = prompt("Enter the number");
+  let result ='';
+  while (true){
+      if (number.length == 1){
+          result = checkNum(number);
+          break;
+      } else {
+          number = prompt("Incorrect value, please enter again: ")
+      }
+  }
   document.write(result);
   function checkNum(num){
-    let result = true;
     if (!isNaN(num)){
-      result;
+      num = true;
     } else {
-      result = false;
+      num = false;
     }
-    return result;
+    return num;
   }
+
 </script>

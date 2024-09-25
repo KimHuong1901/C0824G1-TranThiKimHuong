@@ -14,7 +14,7 @@
   // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1
 
   let total = +prompt("Enter total value: ");
-  let inArr = specCheck(total);
+  let inArr = enterSpecArr(total);
   let value = prompt("Find value: ");
   let count = 0;
   for ( let i = 0; i < inArr.length; i++){
@@ -26,13 +26,27 @@
     count = -1;
   }
   document.write(count);
-function specCheck(num){
+function enterSpecArr(num){
   let numArr =[];
   let data = '';
+  let result ='';
   for ( let i = 0; i < num; i++){
     data = prompt("Enter the value");
-    numArr[i] = data;
+    result = checkchar(data)
+    numArr[i] = result;
   }
   return numArr;
+}
+function checkchar(character){
+    let resultcheck='';
+    while (true){
+        if (character.length == 1){
+            resultcheck = character;
+            break;
+        } else {
+            character = +prompt("Value incorrect, please enter again: ")
+        }
+    }
+    return resultcheck;
 }
 </script>

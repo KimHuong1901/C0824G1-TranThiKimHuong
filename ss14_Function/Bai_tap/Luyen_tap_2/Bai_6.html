@@ -11,14 +11,21 @@
 <script>
     //Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
     // Nếu là nguyên dương trả về true, ngược lại trả về false.
-    let data = prompt("Enter the number: ");
-    let number = parseFloat(data);
-    let result = checkIntP(number);
+    let data = +prompt("Enter the number: ");
+    // let number = parseFloat(data);
+    let result = '';
+    while (true){
+        if (!isNaN(data)){
+            result = checkIntP(data);
+            break;
+        } else {
+            data = +prompt("Value incorrect, please enter again: ")
+        }
+    }
    document.write(result);
     function checkIntP(num){
         let result = '';
-        let check = Number.isInteger(num);
-        if (check == true && num > 0){
+        if (Number.isInteger(num) && num > 0){
               result = true
             } else {
                 result = false;
