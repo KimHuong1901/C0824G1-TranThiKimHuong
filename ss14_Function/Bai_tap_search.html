@@ -116,7 +116,7 @@ Quantity: <input id="quantity" placeholder="Nhập số lượng sản phẩm">
     for (let i = 1; i < rows.length; i++) {
       rows[i].style.backgroundColor = "";
     }
-    arrProduct.forEach((product, index) => {
+    arrProduct.forEach(function(product, index) {
       if (product.name.toLowerCase().includes(data) || product.code.toLowerCase().includes(data)
               ||product.price.toLowerCase().includes(data)||product.description.toLowerCase().includes(data)
               ||product.size.toLowerCase().includes(data)) {
