@@ -7,9 +7,9 @@
 <body>
 <div id="draw">i</div><br>
 <p>Width</p>
-<input type="text" id = "width">
+<input type="text" id = "width"> <label id="errorW" style="color: red"></label>
 <p>Length</p>
-<input type="text" id = "length"><br>
+<input type="text" id = "length"><label id="errorL" style="color: red"></label>
 <button onclick="changeValue()">Change</button>
 <p id="acr" >Acreage</p>
 <p id="per" >Perimeter</p>
@@ -52,15 +52,30 @@
     document.getElementById('acr').innerHTML = "Acreage is: " + reca.getAcreage();
     document.getElementById("per").innerHTML = "Perimeter is: " + reca.getPerimeter();
   function changeValue(){
-     let width = parseFloat(document.getElementById("width").value);
-     let length = parseFloat(document.getElementById("length").value);
-     let newReca = new Rectangle(length, width);
-      newReca.getAcreage();
-      newReca.getPerimeter();
-      newReca.getDraw();
-      document.getElementById('acr').innerHTML = "Acreage is: " + newReca.getAcreage();
-      document.getElementById("per").innerHTML = "Perimeter is: " + newReca.getPerimeter();
+     let width = document.getElementById("width").value;
+     let length = document.getElementById("length").value;
+      let newReca = '';
+      while (true){
+          if(!isNaN(width)){
+              if(!isNaN(length)){
+                  document.getElementById("errorL").style.display = "none"
+                  document.getElementById("errorW").style.display = "none"
+                  newReca = new Rectangle(length, width);
+                  newReca.getAcreage();
+                  newReca.getPerimeter();
+                  newReca.getDraw();
+                  document.getElementById('acr').innerHTML = "Acreage is: " + newReca.getAcreage();
+                  document.getElementById("per").innerHTML = "Perimeter is: " + newReca.getPerimeter();
+                  break;
+              }else {
+                  document.getElementById("errorL").innerHTML = "Incorrect value. Please enter again.";
+
+                  break;
+              }
+          }else {
+              document.getElementById("errorW").innerHTML = "Incorrect value. Please enter again.";
+              break;
+          }
+      }
   }
-
-
 </script>
