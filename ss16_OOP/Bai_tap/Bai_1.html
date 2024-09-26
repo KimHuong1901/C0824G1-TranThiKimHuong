@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="draw">i</div><br>
+<p>Width</p>
+<input type="text" id = "width">
+<p>Length</p>
+<input type="text" id = "length"><br>
+<button onclick="changeValue()">Change</button>
+<p id="acr" >Acreage</p>
+<p id="per" >Perimeter</p>
+</body>
+</html>
+<script>
+    //Khai báo và khởi tạo một đối tượng kiểu Rectangle.
+    //Hiển thị hình chữ nhật trên màn hình web
+    //Thay đổi chiều dài và chiều rộng của hình chữ nhật.
+    //In ra màn hình diện tích và chu vi của hình chữ nhật đó.
+    // this.acreage = acreage;
+    // this.perimeter = perimeter;
+    // this.display = display;
+  class Rectangle {
+    length;
+    width;
+    constructor (length, width){
+      this.length = length;
+      this.width = width;
+    }
+    getAcreage(){
+        return this.length * this.width;
+    }
+    getPerimeter(){
+        return (this.length + this.width)*2;
+    }
+      getDraw(){
+          document.getElementById("draw").style.backgroundColor = "black";
+          document.getElementById("draw").style.width = this.width + "px";
+          document.getElementById("draw").style.height = this.length + "px";
+      }
+
+    changeRec(newLength, newWidth){
+        this.length = newLength;
+        this.width = newWidth;
+    }
+  }
+  let reca = new Rectangle(50, 100);
+  reca.getDraw("draw");
+    document.getElementById('acr').innerHTML = "Acreage is: " + reca.getAcreage();
+    document.getElementById("per").innerHTML = "Perimeter is: " + reca.getPerimeter();
+  function changeValue(){
+     let width = parseFloat(document.getElementById("width").value);
+     let length = parseFloat(document.getElementById("length").value);
+     let newReca = new Rectangle(length, width);
+      newReca.getAcreage();
+      newReca.getPerimeter();
+      newReca.getDraw();
+      document.getElementById('acr').innerHTML = "Acreage is: " + newReca.getAcreage();
+      document.getElementById("per").innerHTML = "Perimeter is: " + newReca.getPerimeter();
+  }
+
+
+</script>

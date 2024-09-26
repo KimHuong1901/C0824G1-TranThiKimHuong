@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="C" value="25">
+<button type="button" onclick="newValue()">Caculate</button>
+<p id="K"></p>
+<p id="F"></p>
+</body>
+</html>
+<script>
+  /*
+  Viết một lớp các đối tượng mô tả loại dữ liệu nhiệt độ lấy tên là Temperature. Các thông số mô tả cho nhiệt độ gồm:
+
+Trị số tính theo đơn vị độ C (giá trị nhỏ nhất -273 độ)
+
+Có tính năng chuyển đổi từ độ C sang độ F.
+
+Có tính năng chuyển đổi từ độ C sang độ Kenvin.
+
+Sử dụng lớp vừa định nghĩa để xây dựng một chương trình JavaScript với kịch bản như sau:
+
+Khởi tạo một đối tượng Temperature.
+
+Gán giá trị độ C cho đối tượng ở nhiệt độ 25 độ.
+
+Hiển thị ra màn hình nhiệt độ F và độ Kenvin tương ứng.
+  */
+  class Temperature {
+    C;
+    constructor(C){
+        this.C = C;
+    }
+    changeF(){
+        //F = (C*1.8)+32
+        return this.C*1.8 +32;
+    }
+    changeK(){
+        //K = C +273.15
+        return this.C*273.15;
+    }
+  }
+
+  function newValue(){
+      let tempC = parseFloat(document.getElementById("C").value);
+      let defaulTemp = new Temperature(tempC);
+      document.getElementById("K").innerHTML = (defaulTemp.changeK()).toFixed(3) + "℃";
+      document.getElementById("F").innerHTML = (defaulTemp.changeF()).toFixed(3) + "F";
+  }
+
+</script>
