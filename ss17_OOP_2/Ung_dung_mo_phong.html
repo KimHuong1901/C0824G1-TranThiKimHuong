@@ -15,8 +15,10 @@
         constructor(weight) {
             this.weight = weight;
         }
-        decrease(num){
-            return num;
+        decrease(){
+            if(this.weight > 0){
+                this.weight--;
+            };
         }
         isEmpty(){
             if(this.weight > 0){
@@ -39,23 +41,23 @@
             this.weight = weight;
         }
         isMale(){
-            if(this.gender == true){
-                return "Male";
-            }else {
-                return "Female";
-            }
+           this.gender;
         }
         setGender(gender){
             this.gender = gender;
         }
-        checkApple(Apple){
-           return Apple.isEmpty();
+        checkApple(apple){
+           return !apple.isEmpty();
         }
-        eat(Apple){
-            this.weight++;
-            Apple.weight--;
+        eat(apple){
+            if(this.checkApple(apple)){
+                apple.decrease();
+                this.weight++;
+            }
         }
-        say(){}
+        say(str){
+            alert("Hi!" + str);
+        }
         getName(){
             return this.name;
         }
