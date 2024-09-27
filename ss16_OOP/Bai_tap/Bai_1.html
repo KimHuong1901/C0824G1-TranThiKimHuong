@@ -55,7 +55,6 @@
      let width = document.getElementById("width").value;
      let length = document.getElementById("length").value;
       let newReca = '';
-      while (true){
           if(!isNaN(width)){
               if(!isNaN(length)){
                   document.getElementById("errorL").style.display = "none"
@@ -66,16 +65,11 @@
                   newReca.getDraw();
                   document.getElementById('acr').innerHTML = "Acreage is: " + newReca.getAcreage();
                   document.getElementById("per").innerHTML = "Perimeter is: " + newReca.getPerimeter();
-                  break;
               }else {
                   document.getElementById("errorL").innerHTML = "Incorrect value. Please enter again.";
-
-                  break;
               }
           }else {
               document.getElementById("errorW").innerHTML = "Incorrect value. Please enter again.";
-              break;
           }
-      }
   }
 </script>

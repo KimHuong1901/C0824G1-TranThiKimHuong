@@ -47,16 +47,12 @@ Hiển thị ra màn hình nhiệt độ F và độ Kenvin tương ứng.
   function newValue(){
       let tempC = document.getElementById("C").value;
       let defaulTemp = new Temperature(tempC);
-      while (true){
           if (!isNaN(tempC)) {
               document.getElementById("error").style.display = "none";
               document.getElementById("K").innerHTML = (defaulTemp.changeK()).toFixed(3) + "℃";
               document.getElementById("F").innerHTML = (defaulTemp.changeF()).toFixed(3) + "F";
-              break;
           } else {
               document.getElementById("error").innerHTML = "Incorrect value. Please enter again";
-              break;
           }
-      }
   }
 </script>
