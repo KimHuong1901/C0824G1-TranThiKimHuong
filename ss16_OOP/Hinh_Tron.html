@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  class Circle {
+    radius;
+    color;
+    constructor(radius, color) {
+      this.radius = radius;
+      this.color = color;
+    }
+    getRadius(){
+      return this.radius;
+    }
+    getArea(){
+      return Math.PI*this.radius*this.radius;
+    }
+  }
+  let circle = new Circle(10);
+  let r = circle.getRadius();
+  let s = (circle.getArea()).toFixed(2);
+  document.write("Hình tròn có bán kính: " + r + "<br>" + "Và diện tích là: " + s);
+</script>
