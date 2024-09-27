@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas"> </canvas>
+</body>
+</html>
+<script>
+    //Vẽ đuờng thẳng
+   /* let line = document.getElementById("myCanvas");
+    let linetx = line.getContext("2d");
+    linetx.moveTo(0,0);
+    linetx.lineTo(300,100);
+    linetx.stroke(); */
+    //Vẽ đường tròn
+    /*let line = document.getElementById("myCanvas");
+    let linetx = line.getContext("2d");
+    linetx.beginPath();
+    linetx.arc(90,50,40,0,2*Math.PI);
+    linetx.stroke();*/
+    //Vẽ chữ:
+    /*let line = document.getElementById("myCanvas");
+    let linetx = line.getContext("2d");
+    linetx.font = "30px Arial";
+    linetx.fillText("Hello World", 10, 20);// 10: tính khoảng casasch của chữ từ trái qua; 20 tính khoảng cách của chữ từ trên xuống
+*/
+    class Rectangle {
+        // Hàm khởi tạo nhận tham số chiều dài và chiều rộng
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        // Phương thức tính diện tích
+        getArea() {
+            return this.length * this.width;
+        }
+
+        // Phương thức tính chu vi
+        getPerimeter() {
+            return 2 * (this.length + this.width);
+        }
+
+        // Phương thức hiển thị hình chữ nhật trên canvas
+        drawRectangle(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            if (canvas.getContext) {
+                const ctx = canvas.getContext('2d');
+                // Xóa canvas trước khi vẽ
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // Vẽ hình chữ nhật với thông số đã được khai báo
+                ctx.fillStyle = '#FF0000';  // Màu sắc của hình chữ nhật
+                ctx.fillRect(10, 10, this.width, this.length);  // Vẽ hình chữ nhật
+            }
+        }
+
+        // Phương thức thay đổi kích thước hình chữ nhật
+        setDimensions(newLength, newWidth) {
+            this.length = newLength;
+            this.width = newWidth;
+        }
+    }
+
+        // Khai báo và khởi tạo một đối tượng hình chữ nhật
+        const rect = new Rectangle(100, 200);
+
+        // Hiển thị hình chữ nhật lên canvas
+        rect.drawRectangle('myCanvas');
+
+        // Cập nhật diện tích và chu vi của hình chữ nhật lên trang web
+        document.getElementById('area').innerText = "Diện tích: " + rect.getArea();
+        document.getElementById('perimeter').innerText = "Chu vi: " + rect.getPerimeter();
+
+        // Hàm thay đổi kích thước hình chữ nhật và hiển thị lại
+        function changeRectangleSize() {
+        // Thay đổi chiều dài và chiều rộng của hình chữ nhật
+        rect.setDimensions(150, 300);
+
+        // Vẽ lại hình chữ nhật
+        rect.drawRectangle('myCanvas');
+
+        // Cập nhật lại diện tích và chu vi
+        document.getElementById('area').innerText = "Diện tích: " + rect.getArea();
+        document.getElementById('perimeter').innerText = "Chu vi: " + rect.getPerimeter();
+    }
+
+
+</script>
