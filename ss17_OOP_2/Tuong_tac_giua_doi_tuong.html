@@ -33,9 +33,12 @@
         }
         switchOff(){
             this.status = true;
+            this.lamp.turnOff();
+
         }
         switchOn(){
             this.status = false;
+            this.lamp.turnOn();
         }
     }
     let button = new SwitchButton(true);
