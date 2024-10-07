@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Code: <input id="code" placeholder="Nhập mã sản phẩm">
+Name: <input id="name" placeholder="Nhập tên sản phẩm">
+Place: <input id="place" placeholder="Nhập nơi sản xuất">
+Price: <input id="price" placeholder="Nhập giá sản phẩm">
+<button onclick="addProduct()">Thêm mới</button>
+<h2>Danh sách sản phẩm</h2>
+<table id="productTable" border="1">
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</body>
+</html>
+<script>
+    class Phone {
+        constructor(code, name, place, price) {
+            this.code = code;
+            this.name = name;
+            this.place = place;
+            this.price = price;
+        }
+
+        get name() {
+            return this._name;
+        }
+
+        get code() {
+            return this._code;
+        }
+
+        get place() {
+            return this._place;
+        }
+
+        get price() {
+            return this._price;
+        }
+
+        set name(value) {
+            this._name = value;
+        }
+
+        set code(value) {
+            this._code = value;
+        }
+
+        set place(value) {
+            this._place = value;
+        }
+
+        set price(value) {
+            this._price = value;
+        }
+    }
+
+    const productList = [];
+
+    function addProduct() {
+        const code = document.getElementById('code').value;
+        const name = document.getElementById('name').value;
+        const place = document.getElementById('place').value;
+        const price = document.getElementById('price').value;
+
+        const newProduct = new Phone(code, name, place, price);
+        productList.push(newProduct);
+
+        displayProducts();
+    }
+
+    function displayProducts() {
+        const productTableBody = document.getElementById('productTable').getElementsByTagName('tbody')[0];
+        productTableBody.innerHTML = '';
+
+        // Sắp xếp danh sách sản phẩm theo tên
+        productList.sort((a, b) => a.name.localeCompare(b.name));
+
+        for (const product of productList) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${product.code}</td>
+                <td>${product.name}</td>
+                <td>${product.place}</td>
+                <td>${product.price}</td>
+            `;
+            productTableBody.appendChild(row);
+        }
+    }
+</script>

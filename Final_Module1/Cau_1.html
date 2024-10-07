@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let numArr =[];
+  let count = 0;
+  let data = '';
+  let sumPositive = 0;
+  let sumNegative = 0;
+  while (true){
+    count = +prompt("Enter the total value: ");
+    if ( count > 0 && count <= 20 && Number.isInteger(count)){
+      for(let i = 0; i < count; i++){
+        data = +prompt("Enter the number: ");
+        if(Number.isInteger(data)){
+          numArr[i] = data;
+          if(numArr[i]%2 === 0){
+            sumPositive += numArr[i];
+          }else {
+            sumNegative += numArr[i];
+          }
+        }else {
+          alert("Please enter correct value.");
+          i--;
+        }
+      }
+      break;
+    } else {
+      alert("Please enter correct number (<=20)");
+    }
+  }
+  let result = sumPositive - sumNegative;
+  document.write(result);
+</script>

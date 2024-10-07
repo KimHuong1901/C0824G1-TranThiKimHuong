@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let arrInt = [];
+  let count = 0;
+  let result = '';
+  let data = '';
+  let primeArr = [];
+  while (true){
+    count = +prompt("Enter the total quantity: ");
+    if ( count > 0 && Number.isInteger(count)){
+      for ( let i = 0; i < count; i++){
+        data = +prompt("Enter the number: ");
+        if (Number.isInteger(data)){
+          arrInt[i] = data;
+          if (checkPrime(arrInt[i])){
+            result = primeArr.push(arrInt[i]);
+          }
+        } else {
+          alert("Please enter correct value");
+          i--
+        }
+      }
+      break;
+    }else {
+      alert("Please enter correct value: ");
+    }
+  }
+  document.write(primeArr);
+  function checkPrime(arr){
+    let result = true;
+    if (arr < 2){
+      result = false;
+    }
+    else{
+      for (var i = 2; i < arr-1; i++)
+      {
+        if (arr % i == 0){
+          result = false;
+          break;
+        }
+      }
+    }
+    return result;
+  }
+
+</script>

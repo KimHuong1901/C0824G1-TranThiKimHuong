@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let data = prompt("Enter the value: ");
+    function kiemTraKyTuInHoa(string){
+        let upperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let dataArr = string.split('');
+        let result ='';
+        let count = 0;
+        for(let i = 0; i < dataArr.length; i++){
+            result = upperString.indexOf(dataArr[i]);
+            if (result >= 0){
+                count++;
+            }
+        }
+        return count;
+    }
+    document.write(kiemTraKyTuInHoa(data));
+</script>
