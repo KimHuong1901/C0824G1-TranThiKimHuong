@@ -84,8 +84,6 @@ Price: <input id="price" placeholder="Nhập giá sản phẩm">
     function displayProducts() {
         const productTableBody = document.getElementById('productTable').getElementsByTagName('tbody')[0];
         productTableBody.innerHTML = '';
-
-        // Sắp xếp danh sách sản phẩm theo tên
         productList.sort((a, b) => a.name.localeCompare(b.name));
 
         for (const product of productList) {
