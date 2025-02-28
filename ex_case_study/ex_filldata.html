@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="ex.css">
+
+</head>
+<body>
+<img src="logo_fixed.png" style="width: 100px; height: 80px">
+<div id="header">
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#"><i class ="home">Trang chủ</i></a></li>
+            <li><a href="#">Toán</a></li>
+            <li><a href="#">Ngữ Văn</a></li>
+            <li><a href="#">Anh Văn</a></li>
+            <li><a href="#">Vật Lý</a></li>
+            <li><a href="#">Hóa Học</a></li>
+            <li><a href="#">Sinh học</a></li>
+            <li><a href="#">Địa lý</a></li>
+            <li><a href="#">Lịch sử</a></li>
+            <li><a href="#">GDCD</a></li>
+        </ul>
+    </nav>
+
+    <div class ="foreContent">
+        <ul>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2024</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2023</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2022</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2021</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2020</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2019</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2018</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2017</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2016</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2015</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2014</a></li>
+            <li><a href="#">Tổng hợp câu hỏi ôn thi THPTQG Sinh Học 2013</a></li>
+        </ul>
+    </div>
+</div>
+<div  style="margin-top: -100px">
+    <div id = "h1" style="border-style: none;">
+        <h1 style="color: black; text-align: center"> 50 CÂU TRẮC NGHIỆM SINH HỌC 12 CÓ LỜI GIẢI</h1>
+    </div>
+    <div id="down"><a href="file_casestudy1.docx" download="50_Câu_Trắc_Nghiệm_Sinh_Học_Có_Lời_Giải">
+    <button id="buttonDown" type="button">Download Here</button>
+    </a></div>
+    <p id="bodyContent"></p>
+    <img src="study_ads.jpg" style="position: fixed; height:auto; width: 250px; right: 0px; margin-top: 50px">
+
+</div>
+</body>
+</html>
+<script>
+    class Question {
+        question;
+        answerA;
+        answerB;
+        answerC;
+        answerD;
+        trueAnswer;
+        description;
+        constructor(question,answerA, answerB, answerC, answerD, trueAnswer, description) {
+            this.question = question;
+            this.answerA = answerA;
+            this.answerB = answerB;
+            this.answerC = answerC;
+            this.answerD = answerD;
+            this.trueAnswer = trueAnswer;
+            this.description = description;
+        }
+    }
+    let quesArr = [];
+    let question1 = new Question("Câu 1: Một đoạn của phân tử ADN mang thông tin mã hoá cho một chuỗi pôlipeptit hay một phân tử ARN được gọi là:",
+        "A. Anticodon.",
+        "B.Gen.",
+        "C.Mã di truyền.",
+        "D.Codon.",
+        "B.Gen.",
+        "Giải thích: Một đoạn của phân tử ADN mang thông tin mã hoá cho một chuỗi pôlipeptit hay một phân tử ARN được gọi là gen.");
+    quesArr.push(question1);
+    let question2 = new Question("Câu 2: Gen là một đoạn của phân tử ADN",
+        "A.mang thông tin mã hoá chuỗi polipeptit hay phân tử ARN.",
+        "B.mang thông tin di truyền của các loài.",
+        "C.mang thông tin cấu trúc của phân tử prôtêin.",
+        "D.chứa các bộ 3 mã hoá các axit amin.",
+        "B.mang thông tin mã hoá chuỗi polipeptit hay phân tử ARN.",
+        "Giải thích: Một đoạn của phân tử ADN mang thông tin mã hoá cho một chuỗi pôlipeptit hay một phân tử ARN được gọi là gen");
+    quesArr.push(question2);
+    let question3 = new Question("Câu 3: Gen là một đoạn ADN mang thông tin di truyền mã hóa cho một sản phẩm xác định là",
+        "A.Một phân tử protein",
+        "B.Một phân tử mARN",
+        "C.Một chuỗi polipeptit hay một phân tử ARN",
+        "D.Một phân tử protein hay 1 phân tử ARN",
+        "C.Một chuỗi polipeptit hay một phân tử ARN",
+        "Giải thích: Gen là một đoạn ADN mang thông tin di truyền mã hóa cho một sản phẩm xác định là một chuỗi polipeptit hay một phân tử ARN.");
+    quesArr.push(question3);
+    let question4 = new Question("Câu 4: Trong các loại nuclêôtit tham gia cấu tạo nên ADN không có loại nào:",
+        "A.Guanin(G).",
+        "B.Uraxin(U).",
+        "C.Ađênin(A).",
+        "D.Timin(T).",
+        "B.Uraxin(U).",
+        "Giải thích:Các loại nucleotit tham gia cấu tạo nên ADN là A, T, G, X. U là đơn phân cấu tạo nên ARN không phải đơn phân cấu tạo nên phân tử ADN.");
+    quesArr.push(question4);
+    let question5 = new Question("Câu 5: ADN không được cấu tạo từ các loại nuclêôtit nào:",
+        "A.A, T, G, X.",
+        "B.G, X",
+        "C.A, U, G, X.",
+        "D.A, T.",
+        "C.A, U, G, X.",
+        "Giải thích:Các loại nucleotit tham gia cấu tạo nên ADN là A, T, G, X. U là đơn phân cấu tạo nên ARN không phải đơn phân cấu tạo nên phân tử ADN");
+    quesArr.push(question5);
+    let question6 = new Question("Câu 6: Timin là nucleotit cấu tạo nên phân tử nào sau đây:",
+        "A.ADN.",
+        "B.mARN",
+        "C.ARN",
+        "D.Protein",
+        "A.ADN.",
+        "Giải thích:Timin là đơn phân của ADN");
+    quesArr.push(question6);
+    let question7 = new Question("Câu 7: Một đoạn gen có trình tự nuclêôtit là 3’AGXTTAGXA5’. Trình tự các nuclêôtit trên mạch bổ sung của đoạn Gen trên là:",
+        "A.3’TXGAATXGT5’",
+        "B.5’AGXTTAGXA3’",
+        "C.5’TXGAATXGT3’",
+        "D.5’UXGAAUXGU3’",
+        "C.5’TXGAATXGT3’",
+        "Giải thích: Theo nguyên tắc bổ sung, ta có: Mạch gốc: 3’AGXTTAGXA5’ & Mạch bổ sung: 5’TXGAATXGT3’");
+    quesArr.push(question7);
+    let question8 = new Question("Câu 8: Một đoạn phân tử ADN ở sinh vật nhân thực có trình tự nuclêôtit trên mạch mang mã gốc là: 3'...AAAXAATGGGGA...5'. Trình tự nuclêôtit trên mạch bổ sung của đoạn ADN này là",
+        "A.5'...TTTGTTAXXXXT...3'.",
+        "B.5'...GTTGAAAXXXXT...3'.",
+        "C.5'...AAAGTTAXXGGT...3'",
+        "D.5'...GGXXAATGGGGA...3'.",
+        "A.5'...TTTGTTAXXXXT...3'",
+        "Giải thích: Theo nguyên tắc bổ sung, ta có:\n" +
+        "Mạch gốc: 3'...AAAXAATGGGGA...5'.\n" +
+        "Mạch bổ sung: 5'...TTTGTTAXXXXT...3'\n");
+    quesArr.push(question8);
+    let question9 = new Question("Câu 9: Mạch thứ nhất của gen có trình tự nuclêôtít là 3’AAAXXAGGGTGX 5’. Tỉ lệ ở mạch thứ 2 của gen là?",
+        "A.1/4",
+        "B.1",
+        "C.1/2.",
+        "D.2.",
+        "C.1/2.",
+        "Giải thích:Tỉ lệ ở đoạn mạch thứ nhất là: 8/4. Do A liên kết với T và G liên kết với X → A1 = T2, T1 = A2, G1 = X2, X1 = G2. Vậy tỉ lệ ở đoạn mạch thứ 2 là 4/8 = 1/2");
+    quesArr.push(question9);
+    let question10 = new Question("Câu 10: Người ta sử dụng 1 chuỗi polinucleotit có tỉ lệ (A+G)/(T+X)=4 để tổng hợp một chuỗi polinucleotit bổ sung có chiều dài bằng chuỗi polinucleotit này.Trong tổng số nucleotit tự do mà môi trường nội bào cung cấp có số loại (T+X) chiếm:",
+        "A.4/5.",
+        "B.1/5.",
+        "C.1/4.",
+        "D.3/4.",
+        "A.4/5.",
+        "Giải thích:Chuỗi polinucleotit mạch gốc = 4. Chuỗi polinucleotit bổ sung 1/4. T + X = 80%, A + G = 20%.  Vậy tỷ lệ T+X chiếm 4/5");
+    quesArr.push(question10);
+    let question11 = new Question("Câu 11: Một gen có chiều dài L, đâu là công thức thể hiện liên hệ giữa chiều dài gen và tổng số nuclêôtit của gen:",
+        "A.L = N*2",
+        "B.L = N/3,4 *2.",
+        "C.L = N*3,4 *2.",
+        "D.L = N/2 *3.4.",
+        "D.L = N/2 *3.4.",
+        "Giải thích: Công thức tính chiều dài gen là :L = N/2 *3.4.");
+    quesArr.push(question11);
+    let question12 = new Question("Câu 12: Một gen có tổng số nuclêôtit là N, đâu là công thức thể hiện liên hệ giữa chiều dài gen và tổng số nuclêôtit của gen:",
+        "A.L = N*2",
+        "B.L = N/3,4 *2.",
+        "C.L = N*3,4 *2.",
+        "D.L = N/2 *3.4.",
+        "D.L = N/2 *3.4.",
+        "Giải thích: Công thức tính chiều dài gen là :L = N/2 *3.4.");
+    quesArr.push(question12);
+    let question13 = new Question("Câu 13: Một gen có chiều dài L, đâu là công thức tính tổng số nuclêôtit của gen:",
+        "A.N = L*2",
+        "B.N = L/3,4 *2.",
+        "C.N = L*3,4 *2.",
+        "D.N = L/2 *3.4.",
+        "B.N = L/3,4 *2.",
+        "Giải thích: Công thức tính chiều dài gen là :L = N/2 *3.4.");
+    quesArr.push(question13);
+    let question14 = new Question("Câu 14: Một gen có chiều dài 5100Å có tổng số nuclêôtit là",
+        "A.3000",
+        "B.3600",
+        "C.2400",
+        "D.4200",
+        "A.3000",
+        "Giải thích: Gen có chiều dài là 5100 Å thì số lượng nucleotit trong gen sẽ là : 5100 : 3,4 × 2 = 3000 ");
+    quesArr.push(question14);
+    let question15 = new Question("Câu 15: Mạch thứ nhất của gen có 10%A, 20%T; mạch thứ hai có tổng số nuclêôtit G với X là 910. Chiều dài của gen (được tính bằng nanomet) là:",
+        "A.4420",
+        "B.884",
+        "C.442",
+        "D.8840",
+        "C.442",
+        "Giải thích:Số nucleotide loại G là: G = G2 + X2 = 910\n" +
+        "Tỉ lệ số nucleotide loại A là: %A = %T = ( 10% + 20%) : 2 = 15%\n" +
+        "Tỉ lệ số nucleotide loại G là: %G = %X = 50% - 15% = 35%\n" +
+        "Tổng số nucleotide: N = 910 : 35 × 100 = 2600\n" +
+        "Chiều dài của gen là: L = 2600 : 2 × 3,4 = 4420 (Å) = 442 (nm)\n");
+    quesArr.push(question15);
+    let question16 = new Question("Câu 16: Mạch thứ nhất của gen có 10%A, 20% T; mạch thứ hai có tổng số nuclêôtit G với X là 1820. Chiều dài của gen (được tính bằng nanomet) là:",
+        "A.4420",
+        "B.884",
+        "C.442",
+        "D.8840",
+        "B.884",
+        "Giải thích:Số nucleotide loại G là : G = G2 + X2 = 1820\n" +
+        "Tỉ lệ số nucleotide loại A là : %A = %T = (10% + 20%) : 2 = 15%\n" +
+        "Tỉ lệ số nucleotide loại G là : %G = %X = 50% - 15% = 35%\n" +
+        "Tổng số nucleotide : N = 1820 : 35 * 100 = 5200\n" +
+        "Chiều dài của gen là : L = 5200: 2 * 3,4 = 8840 Å = 884 nm\n");
+    quesArr.push(question16);
+    let question17 = new Question("Câu 17: Trên mạch thứ nhất của gen có hiệu số giữa X với A bằng 10% và giữa G với X bằng 20% số nuclêôtit của mạch. Trên mạch thứ hai của gen có G = 300 nuclêôtit và hiệu số giữa A với G bằng 10% số nuclêôtit của mạch. Chiều dài của gen bằng",
+        "A.2550 µm",
+        "B.0,255 µm",
+        "C.0,51 µm",
+        "D.5100 µm",
+        "C.0,51 µm",
+        "Giải thích:Gọi số nuclêôtit trên 1 mạch là Y\n" +
+        "Mạch 1: X1 – A1 = 10% số nu của mạch = 0,1Y (1)\n" +
+        "              G1 – X1 = 0,2Y\n" +
+        "Mạch 2: G2 = 300\n" +
+        "              A2 – G2 = 10% số nuclêôtit của mạch = 0,1Y\n" +
+        "Theo nguyên tắc bổ sung: A2 = T1 và G2 = X1\n" +
+        "→ Vậy X1 = 300 và T1 – X1 = 0,1Y (2)\n" +
+        "Từ (1) và (2), ta có\n" +
+        "T1 – A1 = 0,2Y = G1 – X1\n" +
+        "T1 + X1 = A1 + G1\n" +
+        "Mà Y = A1 + T1 + G1 + X1\n" +
+        "Vậy ta có T1 + X1 = 0,5Y (3)\n" +
+        "Từ (2) và (3), ta có X1 = 0,2Y\n" +
+        "Mà X1 = 300\n" +
+        "→ Vậy Y = 1500\n" +
+        "→ Mỗi mạch của gen có 1500 nuclêôtit\n" +
+        "→ Chiều dài gen : 1500 x 3,4 = 5100 (Å) = 0,51 µm\n");
+    quesArr.push(question17);
+    let question18 = new Question("Câu 18: Một gen có số nuclêôtit N, đâu là công thức thể hiện tính khối lượng trung bình của gen từ tổng số nuclêôtit của gen:",
+        "A.N=M×300",
+        "B.M=N/2×300",
+        "C.M=N×300",
+        "D.M=N/300",
+        "C.M=N×300",
+        "Giải thích: Công thức tính khối lượng trung bình của gen là: M=N×300 (đvC)");
+    quesArr.push(question18);
+    let question19 = new Question("Câu 19: Phân tử nào sau đây mang bộ ba đối mã (anticôdon)?",
+        "A.tmARN",
+        "B.ADN",
+        "C.tARN",
+        "D.rARN",
+        "C.tARN",
+        "Giải thích: Phân tử mang bộ ba đối mã là: tARN");
+    quesArr.push(question19);
+    let question20 = new Question("Câu 20: Đối mã đặc hiệu trên phân tử tARN được gọi là",
+        "A.anticodon",
+        "B.triplet",
+        "C.axit amin",
+        "D.codon",
+        "A.anticodon",
+        "Giải thích: Đối mã đặc hiệu trên phân tử tARN được gọi là anticodo");
+    quesArr.push(question20);
+    let question21 = new Question("Câu 21: Bộ ba đối mã (anticôđon) là bộ ba có trên",
+        "A.phân tử tARN",
+        "B.mạch gốc của gen",
+        "C.phân tử rARN",
+        "D.phân tử mARN",
+        "A.phân tử tARN",
+        "Giải thích: Bộ ba đối mã nằm trên phân tử tARN; bộ ba đối mã liên kết bổ sung với bộ ba mã hóa trên phân tử mARN");
+    quesArr.push(question21);
+    let question22 = new Question("Câu 22: Ở sinh vật nhân thực, ARN không đảm nhận chức năng nào sau đây?",
+        "A.Mang axit amin tham gia quá trình dịch mã.",
+        "B.Phân giải prôtêin",
+        "C.Làm khuôn tổng hợp chuỗi pôlipeptit",
+        "D.Cấu tạo nên ribôxôm",
+        "B.Phân giải prôtêin",
+        "Giải thích: Ở sinh vật nhân thực, ARN không đảm nhận chức năng phân giải protein.");
+    quesArr.push(question22);
+    let question23 = new Question("Câu 23: Ở sinh vật nhân thực, ARN đảm nhận chức năng nào sau đây?",
+        "A.Mang axit amin tham gia quá trình dịch mã.",
+        "B.Cấu tạo nên ribôxôm",
+        "C.Làm khuôn tổng hợp chuỗi pôlipeptit",
+        "D.Cả ba chức năng trên",
+        "D.Cả ba chức năng trên",
+        "Giải thích:Ở sinh vật nhân thực, ARN đảm nhận cả ba chức năng A, B, C.");
+    quesArr.push(question23);
+    let question24 = new Question("Câu 24: Cho các đặc điểm: 1. Được cấu tạo bởi một mạch poliribônuclêôtit." + "2.  Đơn phân là adenine, timin, guanin, xitorin.\n" +
+        "3. Cấu tạo theo nguyên tắc đa phân.\n" +
+        "4. Trong cấu tạo có uraxin mà không có timin.\n" +
+        "Số đặc điểm chung có cả ở 3 loại ARN là\n",
+        "A.4",
+        "B.2",
+        "C.1",
+        "D.3",
+        "D.3",
+        "Giải thích: Các điểm chung có ở 3 ARN là: (1),(3),(4). Ý (2) sai vì trong ARN không có timin");
+    quesArr.push(question24);
+    let question25 = new Question("Câu 25: Trong các đặc điểm sau, có bao nhiêu đặc điểm chung của ba loại ARN là tARN, mARN, rARN?\n" +
+        "1. Chỉ gồm một chuỗi polinucleotid.\n" +
+        "2. Cấu tạo theo nguyên tắc đa phân.\n" +
+        "3. Các đơn phân có thể liên kết theo nguyên tắc bổ sung.\n" +
+        "4. Có 4 loại đơn phân.\n" +
+        "Phương án đúng:\n",
+        "A.4",
+        "B.2",
+        "C.3",
+        "D.1",
+        "C.3",
+        "Giải thích: Đặc điểm chung của ba loại ARN là tARN, mARN, rARN là: (1), (2), (4). (3) Sai do mARN là 1 mạch đơn, thẳng -> không có đoạn có liên kết bổ sung");
+    quesArr.push(question25);
+    let question26 = new Question("Câu 26: Đặc điểm nào dưới đây thuộc về cấu trúc của mARN?",
+        "A.mARN có cấu trúc mạch kép, vòng, gồm 4 loại đơn phân A, T, G, X.",
+        "B.mARN có cấu trúc mạch kép, gồm 4 loại đơn phân A, T, G, X",
+        "C.mARN có cấu trúc mạch đơn, gồm 4 loại đơn phân A, U, G, X",
+        "D.mARN có cấu trúc mạch đơn, thẳng, gồm 4 loại đơn phân A, U, G, X",
+        "D.mARN có cấu trúc mạch đơn, thẳng, gồm 4 loại đơn phân A, U, G, X",
+        "Giải thích: mARN có cấu trúc mạch đơn, thẳng, gồm 4 loại đơn phân A, U, G, X");
+    quesArr.push(question26);
+    let question27 = new Question("Câu 27: mARN không có đặc điểm nào dưới đây?",
+        "A.có cấu trúc mạch đơn.",
+        "B.gồm 4 loại đơn phân A, T, G, X",
+        "C.gồm 4 loại đơn phân A, U, G, X",
+        "D.có cấu trúc mạch thẳng",
+        "B.gồm 4 loại đơn phân A, T, G, X",
+        "Giải thích: B sai vì trong ARN không có timin");
+    quesArr.push(question27);
+    let question28 = new Question("Câu 28: Nhận định nào sau đây đúng về tARN?",
+        "A.Thành phần chính cấu trúc nên ribôxôm",
+        "B.Có đầu 5' liên kết với axit amin",
+        "C.Chỉ có cấu trúc mạch đơn",
+        "D.Mang bộ ba đối mã khớp với bộ ba mã sao trên mARN",
+        "D.Mang bộ ba đối mã khớp với bộ ba mã sao trên mARN",
+        "Giải thích:Nhận định đúng là tARN mang bộ ba đối mã khớp với bộ ba mã sao trên mARN\n" +
+        "A sai vì rARN là thành phần chính cấu trúc nên ribôxôm.\n" +
+        "B sai vì tARN có đầu 3' liên kết với axit amin.\n" +
+        "C sai vì tARN có cấu trúc dạng chùy, vẫn có đoạn gồm 2 mạch, có liên kết hiđrô.\n");
+    quesArr.push(question28);
+    let question29 = new Question("Câu 29: Điều nào sau đây là không đúng khi nói về tARN?",
+        "A.Mỗi phần tử tARN có thể mang nhiều loại axit amin khác nhau.",
+        "B.Đầu 3’AXX 5’ mang axit amin",
+        "C.Trong phần tử tARN có liên kết cộng hóa trị và liên kết hiđrô",
+        "D.Có cấu trúc dạng thùy.",
+        "A.Mỗi phần tử tARN có thể mang nhiều loại axit amin khác nhau.",
+        "Giải thích: A sai, mỗi tARN chỉ mang 1 loại aa");
+    quesArr.push(question29);
+    let question30 = new Question("Câu 30: Phiên mã là quá trình tổng hợp nên phân tử:",
+        "A.Prôtêin",
+        "B.ADN",
+        "C.ARN",
+        "D.ADN & ARN",
+        "C.ARN",
+        "Giải thích: Phiên mã là quá trình tổng hợp lên các phân tử ARN");
+    quesArr.push(question30);
+    let question31 = new Question("Câu 31: Có thế gọi phiên mã là quá trình tổng hợp:",
+        "A.mARN",
+        "B.rARN",
+        "C.tARN",
+        "D.ARN",
+        "D.ARN",
+        "Giải thích: Phiên mã là quá trình tổng hợp lên các phân tử ARN (mARN, tARN, rARN)");
+    quesArr.push(question31);
+    let question32 = new Question("Câu 32: Quá trình tổng hợp ARN dựa vào khuôn mẫu của ADN được gọi là:",
+        "A.Quá trình giải mã",
+        "B.Quá trình dịch mã",
+        "C.Quá trình tái bản",
+        "D.Quá trình phiên mã",
+        "D.Quá trình phiên mã",
+        "Giải thích:");
+    quesArr.push(question32);
+    let question33 = new Question("Câu 33: Làm khuôn mẫu cho quá trình phiên mã là nhiệm vụ của",
+        "A.mARN",
+        "B.tARN",
+        "C.Mạch mã hoá.",
+        "D.Mạch mã gốc",
+        "D.Mạch mã gốc",
+        "Giải thích: Quá trình tổng hợp ARN dựa vào khuôn mẫu của ADN được gọi là quá trình phiên mã");
+    quesArr.push(question33);
+    let question34 = new Question("Câu 34: Điều hòa hoạt động gen chính là",
+        "A.Điều hòa lượng sản phẩm do gen tạo ra",
+        "B.Điều hòa lượng mARN",
+        "C.Điều hòa lượng tARN",
+        "D.Điều hòa lượng rARN",
+        "A.Điều hòa lượng sản phẩm do gen tạo ra",
+        "Giải thích: Làm khuôn mẫu là nhiệm vụ của: mạch mã gốc");
+    quesArr.push(question34);
+    let question35 = new Question("Câu 35: Điều hòa hoạt động của gen chính là:",
+        "A.Điều hòa lượng mARN, tARN, rARN tạo ra để tham gia tổng hợp protein",
+        "B.Điều hòa lượng enzim tạo ra để tham gia tổng hợp protein.",
+        "C.Điều hòa lượng sản phẩm của gen đó được tạo ra.",
+        "D.Điều hòa lượng ATP cần thiết cho quá trình tổng hợp protein",
+        "C.Điều hòa lượng sản phẩm của gen đó được tạo ra.",
+        "Giải thích: Điều hòa hoạt động của gen chính là điều hòa lượng sản phẩm do gen tạo ra");
+    quesArr.push(question35);
+    let question36 = new Question("Câu 36: Sự biểu hiện điều hòa hoạt động của gen ở sinh vật nhân sơ diễn ra chủ yếu ở cấp độ:",
+        "A.Phiên mã",
+        "B.Sau phiên mã",
+        "C.Trước phiên mã",
+        "D.Dịch mã",
+        "A.Phiên mã",
+        "Giải thích: Điều hòa hoạt động của gen ở sinh vật nhân sơ chủ yếu diễn ra ở giai đoạn phiên mã");
+    quesArr.push(question36);
+    let question37 = new Question("Câu 37: Ở tế bào nhân sơ, sự điều hòa hoạt động của gen xảy ra chủ yếu ở mức độ:",
+        "A.Từ trước phiên mã đến sau dịch mã",
+        "B.Phiên mã",
+        "C.Dịch mã",
+        "D.Ở giai đoạn trước phiên mã",
+        "B.Phiên mã",
+        "Giải thích: Điều hòa hoạt động của gen ở sinh vật nhân sơ chủ yếu diễn ra ở giai đoạn phiên mã");
+    quesArr.push(question37);
+    let question38 = new Question("Câu 38: Theo Jacôp và Mônô, các thành phần cấu tạo của opêron Lac gồm:",
+        "A.Gen điều hoà, nhóm gen cấu trúc, vùng khởi động (",
+        "B.Vùng vận hành (O), nhóm gen cấu trúc, vùng khởi động (P)",
+        "C.Gen điều hoà, nhóm gen cấu trúc, vùng vận hành (O)",
+        "D.Gen điều hoà, nhóm gen cấu trúc, vùng vận hành (O), vùng khởi động (P).",
+        "B.Vùng vận hành (O), nhóm gen cấu trúc, vùng khởi động (P)",
+        "Giải thích: Operon Lac bao gồm: Nhóm gen cấu trúc, vùng vận hành (O), vùng khởi động (P)");
+    quesArr.push(question38);
+    let question39 = new Question("Câu 39: Trình tự các thành phần của một Opêron gồm :",
+        "A.Vùng vận hành - Vùng khởi động - Nhóm gen cấu trúc",
+        "B.Nhóm gen cấu trúc - Vùng vận hành - Vùng khởi động",
+        "C.Vùng khởi động - Vùng vận hành - Nhóm gen cấu trúc",
+        "D.Nhóm gen cấu trúc - Vùng khởi động - Vùng vận hành",
+        "C.Vùng khởi động - Vùng vận hành - Nhóm gen cấu trúc",
+        "Giải thích: Operon Lac bao gồm: Vùng khởi động - Vùng vận hành - Nhóm gen cấu trúc");
+    quesArr.push(question39);
+    let question40 = new Question("Câu 40: Thành phần nào dưới đây không có trong cấu tạo của opêron Lac ở E.coli?",
+        "A.Gen điều hoà",
+        "B.Nhóm gen cấu trúc",
+        "C.Vùng vận hành (O)",
+        "D.Vùng khởi động (P)",
+        "A.Gen điều hoà",
+        "Giải thích: Gen điều hoà không nằm trong Operon Lac");
+    quesArr.push(question40);
+    let question41 = new Question("Câu 41: Thành phần nào sau đây không thuộc opêron Lac?",
+        "A.Vùng khởi động của gen điều hòa.",
+        "B.Gen Y của opêron",
+        "C.Vùng vận hành của opêron",
+        "D.ARN",
+        "D.ARN",
+        "Giải thích: Gen điều hoà không thuộc Operon Lac");
+    quesArr.push(question41);
+    let question42 = new Question("Câu 42: Trên sơ đồ cấu tạo của opêron Lac ở E. coli, kí hiệu O (operator) là:",
+        "A. Vùng khởi động.",
+        "B. Vùng kết thúc.",
+        "C. Vùng mã hoá",
+        "D. Vùng vận hành.",
+        "D. Vùng vận hành.",
+        "Giải thích: Kí hiệu O (operator) là vùng vận hành");
+    quesArr.push(question42);
+    let question43 = new Question("Câu 43:Operator (viết tắt: O) là:",
+        "A. Cụm gen cấu trúc liên quan về chức năng",
+        "B. Vùng vận hành có thể liên kết prôtêin ức chế",
+        "C. Vùng điều hòa đầu gen nơi khởi đầu phiên mã",
+        "D. Gen điều hòa tổng hợp prôtêin ức chế",
+        "B. Vùng vận hành có thể liên kết prôtêin ức chế",
+        "Giải thích: Kí hiệu O (operator)  là vùng vận hành có thể liên kết prôtêin ức chế");
+    quesArr.push(question43);
+    let question44 = new Question("Câu 44:Trên sơ đồ cấu tạo của opêron Lac ở E. coli, vùng vận hành được kí hiệu là:",
+        "A. O (operator)",
+        "B. P (promoter)",
+        "C. Z, Y, Z",
+        "D. R",
+        "A. O (operator)",
+        "Giải thích: Kí hiệu O (operator) là vùng vận hành.");
+    quesArr.push(question44);
+    let question45 = new Question("Câu 45:Trên sơ đồ cấu tạo của opêron Lac ở E. coli, vùng khởi động được kí hiệu là:",
+        "A. O (operator)",
+        "B. P (promoter)",
+        "C. Z, Y, Z",
+        "D. R",
+        "B. P (promoter)",
+        "Giải thích: Vùng khởi động kí hiệu là P (promoter)");
+    quesArr.push(question45);
+    let question46 = new Question("Câu 46: Vùng khởi động (vùng P hay promotor) của Operon là",
+        "A. nơi ARN polymerase bám vào và khởi động quá trình phiên mã.",
+        "B. vùng mã hóa cho prôtêin trực tiếp tham gia vào quá trình trao đổi chất của tế bào.",
+        "C. vùng gen mã hóa prôtêin ức chế.",
+        "D. trình tự nuclêôtit đặc biệt, nơi liên kết của protein ức chế.",
+        "A. nơi ARN polymerase bám vào và khởi động quá trình phiên mã.",
+        "Giải thích: Vùng khởi động (vùng P hay promotor) của Operon là nơi ARN polymerase bám vào và khởi động quá trình phiên mã");
+    quesArr.push(question46);
+    let question47 = new Question("Câu 47: Tín hiệu điều hòa hoạt động gen của opêron Lac ở vi khuẩn E.coli là:",
+        "A. Prôtêin ức chế.",
+        "B. Đường lactozơ.",
+        "C. Enzim ADN-polimeraza.",
+        "D. Đường mantôzơ.",
+        "B. Đường lactozơ.",
+        "Giải thích: Tín hiệu điều hòa hoạt động gen của operon Lac ở vi khuẩn E.coli là đường lactose");
+    quesArr.push(question47);
+    let question48 = new Question("Câu 48: Chất nào đóng vai trò như tín hiệu điều hòa hoạt động gen của opêron Lac ở vi khuẩn E.coli là:",
+        "A. mARN.",
+        "B. Enzim ARN-polimeraza.",
+        "C. Đường lactozơ.",
+        "D. Prôtêin ức chế.",
+        "C. Đường lactozơ.",
+        "Giải thích: Tín hiệu điều hòa hoạt động gen của operon Lac ở vi khuẩn E.coli là đường lactose");
+    quesArr.push(question48);
+    let question49 = new Question("Câu 49: Đột biến gen là gì?",
+        "A. Tạo ra những alen mới;",
+        "B. Sự biến đổi của một hay một số cặp nuclêôtit trong gen;",
+        "C. Sự biến đổi của 1 nuclêôtit trong gen;",
+        "D. Tạo nên những kiểu hình mới;",
+        "B. Sự biến đổi của một hay một số cặp nuclêôtit trong gen;",
+        "Giải thích: Đột biến gen là sự biến đổi của một hay một số cặp nuclêôtit trong gen");
+    quesArr.push(question49);
+    let question50 = new Question("Câu 50: Đột biến gen là:",
+        "A. Là sự biến đổi vật chất di truyền xảy ra trong cấu trúc phân tử của NST.",
+        "B. Là sự biến đổi kiểu hình thích nghi với môi trường.",
+        "C. Là sự biến đổi xảy ra trong phân tử AND có liên quan đến 1 hoặc một số cặp NST.",
+        "D. Là những biến đổi trong cấu trúc của gen có liên quan đến một hoặc một số cặp nucleotit",
+        "D. Là những biến đổi trong cấu trúc của gen có liên quan đến một hoặc một số cặp nucleotit",
+        "Giải thích: Đột biến gen là những biến đổi trong cấu trúc của gen có liên quan đến một hoặc một số cặp nucleotit");
+    quesArr.push(question50);
+    let result ="";
+    let ans ="";
+    let idAns = "";
+    let trueAns ="";
+    for(let i = 0; i < 50; i++){
+        result +="<div id='mainContent'>";
+        result += `<h3> ${quesArr[i].question}</h3>`;
+        ans = "'" + quesArr[i].answerA +"'";
+        idAns = "'answer" + (i+1) + "A'";
+        trueAns = "'" + quesArr[i].trueAnswer + "'";
+        result += `<input type='radio' name='answer' value = ${quesArr[i].answerA}
+                onClick="selectAnswer( ${ans}, ${idAns}, ${trueAns}, 'correctAnswer${i+1}', 'description${i+1}')" >`
+        result += `<label id = "answer${i+1}A" class="random">${quesArr[i].answerA}</label><br>`;
+
+        ans = "'" + quesArr[i].answerB +"'";
+        idAns = "'answer" + (i+1) + "B'";
+        result += `<input type='radio' name='answer' value = ${quesArr[i].answerB}
+                onClick="selectAnswer(${ans}, ${idAns}, ${trueAns}, 'correctAnswer${i+1}', 'description${i+1}')" >`
+        result += `<label id = "answer${i+1}B" class="random">${quesArr[i].answerB}</label><br>`;
+
+        ans = "'" + quesArr[i].answerC +"'";
+        idAns = "'answer" + (i+1) + "C'";
+        result += `<input type='radio' name='answer' value = ${quesArr[i].answerC}
+                onClick="selectAnswer(${ans}, ${idAns}, ${trueAns}, 'correctAnswer${i+1}', 'description${i+1}')" >`
+        result += `<label id = "answer${i+1}C" class="random">${quesArr[i].answerC}</label><br>`;
+
+        ans = "'" + quesArr[i].answerD +"'";
+        idAns = "'answer" + (i+1) + "D'";
+        result += `<input type='radio' name='answer' value = ${quesArr[i].answerD}
+                onClick="selectAnswer(${ans}, ${idAns}, ${trueAns}, 'correctAnswer${i+1}', 'description${i+1}')" >`
+        result += `<label id = "answer${i+1}D" class="random">${quesArr[i].answerD}</label><br>`;
+        result += `<label class = "idCorrect" id="correctAnswer${i+1}">Đáp án đúng là: ${quesArr[i].trueAnswer}</label>` + "<br>";
+        result += `<label class = "descrip" id ="description${i+1}">${quesArr[i].description}</label>`;
+        result+= "</div>";
+    }
+    document.getElementById("bodyContent").innerHTML = result;
+    function selectAnswer(answer, idElement, trueAnswer, idCor, des){
+        if(answer === trueAnswer){
+            document.getElementById(idElement).style.color = "green";
+        } else {
+            document.getElementById(idElement).style.color = "red";
+            document.getElementById(idCor).classList.remove("idCorrect");
+            document.getElementById(idCor).classList.add("showEl");
+            document.getElementById(des).classList.remove("descrip");
+            document.getElementById(des).classList.add("disDescrip");
+        }
+    }
+    window.onscroll = function (){setHeader()};
+    let header = document.getElementById("header");
+    let sticky = header.offsetTop;
+    function setHeader(){
+        if(window.pageYOffset > sticky){
+            header.classList.add("sticky");
+        } else{
+            header.classList.remove("sticky");
+        }
+    }
+</script>
